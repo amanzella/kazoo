@@ -24,7 +24,12 @@ cache:
 before_install:
   - set -e
 
+install:
+  - wget https://s3.amazonaws.com/rebar3/rebar3 && chmod +x ./rebar3
+  - export PATH=$PATH:$PWD
+
 script:
+  - rebar3 compile
   - # make compile-test
   - # make eunit
   - make deps
