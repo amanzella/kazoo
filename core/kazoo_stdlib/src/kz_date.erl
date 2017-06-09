@@ -8,11 +8,10 @@
 %%%-------------------------------------------------------------------
 -module(kz_date).
 
--include("kazoo/include/kz_types.hrl").
+-include_lib("kazoo_types/include/kz_types.hrl").
 
 %% Date object functions
--export([
-         from_gregorian_seconds/2
+-export([from_gregorian_seconds/2
         ,from_iso_week/1
 
         ,find_next_weekday/2
@@ -21,8 +20,7 @@
         ]).
 
 %% Utility Functions
--export([
-         ordinal_to_position/1
+-export([ordinal_to_position/1
         ,wday_to_dow/1
         ,dow_to_wday/1
         ]).

@@ -17,7 +17,6 @@
 %%% Fix KAZOO-3406: Sponsored by Velvetech LLC, implemented by SIPLABS LLC
 %%%-------------------------------------------------------------------
 -module(kzc_recording).
-
 -behaviour(gen_listener).
 
 -export([start_link/2
@@ -39,7 +38,7 @@
         ,code_change/3
         ]).
 
--include_lib("kazoo/include/kz_types.hrl").
+-include_lib("kazoo_types/include/kz_types.hrl").
 
 -define(SERVER, ?MODULE).
 
