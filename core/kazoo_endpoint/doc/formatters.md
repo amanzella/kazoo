@@ -19,9 +19,9 @@ On the resource document, define a key `Formatters` which is a JSON object of ro
     {"_id":"some_resource_id"
      ,...
      ,"formatters":{
-         "request":{...}
+         "request":[{...}]
          ,"from":[{...},{...}]
-         ,"caller_id_number":{...}
+         ,"outbound_caller_id_number":{...}
          ...
      }
 
@@ -84,7 +84,7 @@ A more full example:
               "match_invite_format":true
               ,"direction":"outbound"
           }]
-          ,"caller_id_name":[{
+          ,"outbound_caller_id_name":[{
               "value":"Kazoo"
           }]
       }
@@ -95,7 +95,7 @@ This will
 1. Format the 'From' DID as E164 before republishing the inbound request
 2. Format the From as NPAN on an offnet(outbound) request
 3. Format the Diversion username to match the invite format of the request on an outbound request
-4. Set the Caller ID Name to "Kazoo" on inbound and outbound calls
+4. Set the Outbound Caller ID Name to "Kazoo" on outbound calls
 
 ### SIP Headers
 
