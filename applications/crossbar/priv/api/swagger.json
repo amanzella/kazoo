@@ -20085,6 +20085,23 @@
                 }
             }
         },
+        "/accounts/{ACCOUNT_ID}/port_requests/last_transitions": {
+            "get": {
+                "parameters": [
+                    {
+                        "$ref": "#/parameters/auth_token_header"
+                    },
+                    {
+                        "$ref": "#/parameters/ACCOUNT_ID"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "request succeeded"
+                    }
+                }
+            }
+        },
         "/accounts/{ACCOUNT_ID}/port_requests/pending": {
             "get": {
                 "parameters": [
