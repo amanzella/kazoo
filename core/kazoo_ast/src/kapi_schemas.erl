@@ -21,7 +21,7 @@ to_schemas() ->
     lists:foreach(fun update_schema/1, process()).
 
 to_schema(KapiModule) ->
-    update_schema(process(KapiModule)).
+    lists:foreach(fun update_schema/1, process(KapiModule)).
 
 update_schema(GeneratedJObj) ->
     ID = kz_doc:id(GeneratedJObj),
@@ -37,6 +37,8 @@ update_schema(GeneratedJObj) ->
 existing_schema(Name) ->
     case kz_json_schema:fload(Name) of
         {'ok', JObj} -> JObj;
+        {'error', 'not_found'} ->
+            kz_json:new();
         {'error', _E} ->
             io:format("failed to find ~s: ~p~n", [Name, _E]),
             kz_json:new()
@@ -52,7 +54,7 @@ process() ->
               ,{'accumulator', #acc{}}
               ],
     #acc{schemas=Schemas} = kazoo_ast:walk_project(Options),
-    io:format(" done~n~p~n", [Schemas]),
+    io:format(" done~n", []),
     schemas_to_list(Schemas).
 
 process(KapiModule) ->
@@ -63,15 +65,14 @@ process(KapiModule) ->
               ,{'accumulator', #acc{}}
               ],
     #acc{schemas=Schemas} = kazoo_ast:walk_modules([KapiModule], Options),
-    io:format(" done~n~p~n", [Schemas]),
+    io:format(" done~n", []),
     schemas_to_list(Schemas).
 
 schemas_to_list(Schemas) ->
     kz_json:foldl(fun schema_api_to_list/3, [], Schemas).
 
 schema_api_to_list(_KAPI, API, Acc0) ->
-    io:format("extracting kapi ~s~n", [_KAPI]),
-    kz_json:foldl(fun(_A, Schema, Acc) -> io:format("extracting api ~s~n", [_A]), [Schema | Acc] end
+    kz_json:foldl(fun(_A, Schema, Acc) -> [Schema | Acc] end
                  ,Acc0
                  ,API
                  ).
@@ -93,24 +94,19 @@ print_dot(Module, #acc{}=Acc) ->
 set_function(<<_/binary>> = Function, #acc{}=Acc) ->
     case kz_binary:reverse(Function) of
         <<"v_", Nuf/binary>> ->
-            Fun = kz_binary:reverse(Nuf),
-            io:format("function ~s~n", [Fun]),
-            Acc#acc{api_name=Fun};
+            Acc#acc{api_name=kz_binary:reverse(Nuf)};
         _ ->
-            io:format("function ~s~n", [Function]),
             Acc#acc{api_name=Function}
     end;
 set_function(Function, Acc) ->
     set_function(kz_term:to_binary(Function), Acc).
 
 expression_to_schema(?MOD_FUN_ARGS('kz_api', 'build_message', [_Prop, Required, Optional]), Acc) ->
-    io:format("process builder for ~p~n", [Acc#acc.api_name]),
     properties_to_schema(kz_ast_util:ast_to_list_of_binaries(Required)
                         ,optional_validators(Optional)
                         ,Acc
                         );
 expression_to_schema(?MOD_FUN_ARGS('kz_api', 'validate', [_Prop, _Required, Values, Types]), Acc) ->
-    io:format("process validator for ~p~n", [Acc#acc.api_name]),
     validators_to_schema(ast_to_proplist(Values), ast_to_proplist(Types), Acc);
 expression_to_schema(_Expr, Acc) ->
     Acc.
@@ -197,6 +193,8 @@ validator_properties({_, 'is_integer', 1}) ->
     kz_json:from_list([{<<"type">>, <<"integer">>}]);
 validator_properties({_, 'is_binary', 1}) ->
     kz_json:from_list([{<<"type">>, <<"string">>}]);
+validator_properties({_, 'is_boolean', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"boolean">>}]);
 validator_properties({_, 'is_list', 1}) ->
     kz_json:from_list([{<<"type">>, <<"array">>}]);
 validator_properties({'kz_json', 'is_json_object', 1}) ->
@@ -222,6 +220,18 @@ validator_properties({'kapi_dialplan', 'b_leg_events_v', 1}) ->
                                           ,{<<"enum">>, ?CALL_EVENTS}
                                           ])
                        }
+                      ]);
+validator_properties({'function', 'b_leg_events_v', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"array">>}
+                      ,{<<"items">>
+                       ,kz_json:from_list([{<<"type">>, <<"string">>}
+                                          ,{<<"enum">>, ?CALL_EVENTS}
+                                          ])
+                       }
+                      ]);
+validator_properties({'function', 'tone_timeout_v', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}
+                      ,{<<"minimum">>, 0}
                       ]);
 validator_properties({'function', _F, _A}) ->
     io:format("  no properties for fun ~p~n", [_F]),
