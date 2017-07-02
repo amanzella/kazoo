@@ -1,0 +1,1 @@
+{"type":"object","required":["Error-Msg","Error-Code"],"properties":{},"description":"AMQP API for asr.error","_id":"kapi.asr.error","Event-Name":{"type":"string","enum":["error"]},"Event-Category":{"type":"string","enum":["asr"]},"Error-Msg":{},"Error-Code":{},"$schema":"http://json-schema.org/draft-04/schema#"}

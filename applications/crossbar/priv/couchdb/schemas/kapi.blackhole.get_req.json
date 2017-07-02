@@ -1,0 +1,1 @@
+{"type":"object","required":[],"properties":{},"description":"AMQP API for blackhole.get_req","_id":"kapi.blackhole.get_req","Socket-ID":{},"Event-Name":{"type":"string","enum":["get_req"]},"Event-Category":{"type":"string","enum":["blackhole"]},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

@@ -1,0 +1,1 @@
+{"type":"object","required":["Action"],"properties":{},"description":"AMQP API for presence.sync","_id":"kapi.presence.sync","Event-Package":{},"Event-Name":{"type":"string","enum":["sync"]},"Event-Category":{"type":"string","enum":["presence"]},"Action":{"type":"string","enum":["Request","Start","End"]},"$schema":"http://json-schema.org/draft-04/schema#"}

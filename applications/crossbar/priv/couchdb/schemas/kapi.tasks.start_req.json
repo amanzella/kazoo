@@ -1,0 +1,1 @@
+{"type":"object","required":["Task-ID"],"properties":{},"description":"AMQP API for tasks.start_req","_id":"kapi.tasks.start_req","Task-ID":{},"Event-Name":{"type":"string","enum":["start_req"]},"Event-Category":{"type":"string","enum":["tasks"]},"$schema":"http://json-schema.org/draft-04/schema#"}

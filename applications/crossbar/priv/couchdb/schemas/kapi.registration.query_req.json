@@ -1,0 +1,1 @@
+{"type":"object","required":[],"properties":{"Fields":{},"Count-Only":{}},"description":"AMQP API for registration.query_req","_id":"kapi.registration.query_req","Username":{},"Realm":{},"Fields":{},"Event-Name":{"type":"string","enum":["reg_query"]},"Event-Category":{"type":"string","enum":["directory"]},"Count-Only":{},"$schema":"http://json-schema.org/draft-04/schema#"}

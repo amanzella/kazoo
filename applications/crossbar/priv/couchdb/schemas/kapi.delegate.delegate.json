@@ -1,0 +1,1 @@
+{"type":"object","required":["Delegate-Message"],"properties":{},"description":"AMQP API for delegate.delegate","_id":"kapi.delegate.delegate","Event-Name":{"type":"string","enum":["job"]},"Event-Category":{"type":"string","enum":["delegate"]},"Delegate-Message":{},"$schema":"http://json-schema.org/draft-04/schema#"}

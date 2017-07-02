@@ -1,0 +1,1 @@
+{"type":"object","required":["Call-IDs"],"properties":{},"description":"AMQP API for inspector.filter_req","_id":"kapi.inspector.filter_req","Event-Name":{"type":"string","enum":["filter_req"]},"Event-Category":{"type":"string","enum":["call_inspector"]},"Call-IDs":{},"$schema":"http://json-schema.org/draft-04/schema#"}

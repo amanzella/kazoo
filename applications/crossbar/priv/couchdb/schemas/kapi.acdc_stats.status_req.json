@@ -1,0 +1,1 @@
+{"type":"object","required":["Account-ID"],"properties":{},"description":"AMQP API for acdc_stats.status_req","_id":"kapi.acdc_stats.status_req","Status":{},"Start-Range":{},"Event-Name":{"type":"string","enum":["status_req"]},"Event-Category":{"type":"string","enum":["acdc_stat"]},"End-Range":{},"Agent-ID":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

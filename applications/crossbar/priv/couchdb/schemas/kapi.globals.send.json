@@ -1,0 +1,1 @@
+{"type":"object","required":["Message","Name"],"properties":{},"description":"AMQP API for globals.send","_id":"kapi.globals.send","Name":{},"Message":{},"Event-Name":{"type":"string","enum":["send"]},"Event-Category":{"type":"string","enum":["globals"]},"$schema":"http://json-schema.org/draft-04/schema#"}

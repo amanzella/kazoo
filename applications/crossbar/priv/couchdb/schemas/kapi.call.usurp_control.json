@@ -1,0 +1,1 @@
+{"type":"object","required":["Fetch-ID","Call-ID"],"properties":{},"description":"AMQP API for call.usurp_control","_id":"kapi.call.usurp_control","Reason":{},"Media-Node":{},"Fetch-ID":{},"Event-Name":{"type":"string","enum":["usurp_control"]},"Event-Category":{"type":"string","enum":["call_event"]},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

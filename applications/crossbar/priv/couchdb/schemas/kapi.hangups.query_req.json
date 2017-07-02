@@ -1,0 +1,1 @@
+{"type":"object","required":["Hangup-Cause"],"properties":{},"description":"AMQP API for hangups.query_req","_id":"kapi.hangups.query_req","Raw-Data":{"type":"boolean"},"Hangup-Cause":{},"Event-Name":{"type":"string","enum":["query_req"]},"Event-Category":{"type":"string","enum":["hangups"]},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

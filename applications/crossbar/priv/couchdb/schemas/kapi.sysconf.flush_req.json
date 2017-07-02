@@ -1,0 +1,1 @@
+{"type":"object","required":["Category"],"properties":{},"description":"AMQP API for sysconf.flush_req","_id":"kapi.sysconf.flush_req","Node":{"type":"string"},"Key":{"type":"string"},"Event-Name":{"type":"string","enum":["flush_req"]},"Event-Category":{"type":"string","enum":["sysconf"]},"Category":{"type":"string"},"$schema":"http://json-schema.org/draft-04/schema#"}

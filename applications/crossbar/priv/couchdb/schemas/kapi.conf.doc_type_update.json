@@ -1,0 +1,1 @@
+{"type":"object","required":["Type"],"properties":{},"description":"AMQP API for conf.doc_type_update","_id":"kapi.conf.doc_type_update","Type":{},"Event-Name":{"type":"string","enum":["doc_type_update"]},"Event-Category":{"type":"string","enum":["configuration"]},"Action":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

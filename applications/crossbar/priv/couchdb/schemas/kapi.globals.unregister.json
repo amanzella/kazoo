@@ -1,0 +1,1 @@
+{"type":"object","required":["Name"],"properties":{},"description":"AMQP API for globals.unregister","_id":"kapi.globals.unregister","Reason":{},"Name":{},"Event-Name":{"type":"string","enum":["unregister"]},"Event-Category":{"type":"string","enum":["globals"]},"$schema":"http://json-schema.org/draft-04/schema#"}

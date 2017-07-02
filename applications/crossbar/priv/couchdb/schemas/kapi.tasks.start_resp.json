@@ -1,0 +1,1 @@
+{"type":"object","required":["Reply"],"properties":{},"description":"AMQP API for tasks.start_resp","_id":"kapi.tasks.start_resp","Reply":{},"Event-Name":{"type":"string","enum":["start_resp"]},"Event-Category":{"type":"string","enum":["tasks"]},"$schema":"http://json-schema.org/draft-04/schema#"}

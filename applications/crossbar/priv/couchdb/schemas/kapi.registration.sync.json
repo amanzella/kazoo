@@ -1,0 +1,1 @@
+{"type":"object","required":[],"properties":{},"description":"AMQP API for registration.sync","_id":"kapi.registration.sync","Event-Name":{"type":"string","enum":["reg_sync"]},"Event-Category":{"type":"string","enum":["directory"]},"$schema":"http://json-schema.org/draft-04/schema#"}

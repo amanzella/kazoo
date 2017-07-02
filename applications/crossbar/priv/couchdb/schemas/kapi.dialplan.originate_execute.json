@@ -1,0 +1,1 @@
+{"type":"object","required":["Call-ID"],"properties":{},"description":"AMQP API for dialplan.originate_execute","_id":"kapi.dialplan.originate_execute","Event-Name":{"type":"string","enum":["originate_execute"]},"Event-Category":{"type":"string","enum":["dialplan"]},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

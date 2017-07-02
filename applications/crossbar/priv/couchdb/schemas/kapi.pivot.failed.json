@@ -1,0 +1,1 @@
+{"type":"object","required":["Call-ID"],"properties":{},"description":"AMQP API for pivot.failed","_id":"kapi.pivot.failed","Event-Name":{"type":"string","enum":["failed"]},"Event-Category":{"type":"string","enum":["pivot"]},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}

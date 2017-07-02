@@ -1,0 +1,1 @@
+{"type":"object","required":["Account-ID"],"properties":{},"description":"AMQP API for fax.start_account","_id":"kapi.fax.start_account","Event-Name":{"type":"string","enum":["account"]},"Event-Category":{"type":"string","enum":["start"]},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
