@@ -36,7 +36,7 @@ update_schema(GeneratedJObj, ID) ->
                               ,GeneratedJObj
                               ),
     UpdatedSchema = kz_json:delete_key(<<"id">>, MergedJObj),
-    case kz_json:are_identical(ExistingJObj, UpdatedSchema) of
+    case kz_json:are_equal(ExistingJObj, UpdatedSchema) of
         'true' -> 'ok';
         'false' ->
             'ok' = file:write_file(Path, kz_json:encode(UpdatedSchema))
