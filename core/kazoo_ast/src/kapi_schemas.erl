@@ -8,8 +8,9 @@
 -include_lib("kazoo_stdlib/include/kazoo_json.hrl").
 -include_lib("kazoo_ast/include/kz_ast.hrl").
 -include_lib("kazoo_amqp/src/api/kapi_presence.hrl").
+-include_lib("kazoo_amqp/src/api/kapi_route.hrl").
 
--record(acc, {kapi_name :: ne_binary() %% s/kapi_(.+)/\1/
+-record(acc, {kapi_name = <<"empty">> :: ne_binary() %% s/kapi_(.+)/\1/
              ,api_name = <<"empty">> :: api_ne_binary() %% api function
              ,schemas = kz_json:new() :: kz_json:object()
              }).
@@ -44,8 +45,8 @@ existing_schema(Name) ->
             kz_json:new()
     end.
 
--spec process() -> acc().
--spec process(module()) -> acc().
+-spec process() -> kz_json:objects().
+-spec process(module()) -> kz_json:objects().
 process() ->
     io:format("process kapi modules: "),
     Options = [{'expression', fun expression_to_schema/2}
@@ -233,9 +234,27 @@ validator_properties({'function', 'tone_timeout_v', 1}) ->
     kz_json:from_list([{<<"type">>, <<"integer">>}
                       ,{<<"minimum">>, 0}
                       ]);
+validator_properties({'function', 'binding_digit_timeout_v', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}
+                      ,{<<"minimum">>, 0}
+                      ]);
+validator_properties({'function', 'has_cost_parameters', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"object">>}
+                      ,{<<"properties">>, cost_parameters_schema()}
+                      ]);
+validator_properties({'function', 'store_media_content_v', 1}) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
 validator_properties({'function', _F, _A}) ->
-    io:format("  no properties for fun ~p~n", [_F]),
+    io:format("  no properties for fun ~p/~p~n", [_F, _A]),
     kz_json:new().
+
+cost_parameters_schema() ->
+    kz_json:from_list(
+      [cost_parameter_schema(K) || K <- ?ROUTE_REQ_COST_PARAMS]
+     ).
+
+cost_parameter_schema(Parameter) ->
+    {Parameter, kz_json:from_list([{<<"type">>, <<"integer">>}])}.
 
 ast_to_proplist(ASTList) ->
     ast_to_proplist(ASTList, []).
