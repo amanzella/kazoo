@@ -795,10 +795,10 @@
                          ,{<<"Event-Name">>, <<"command">>}
                          ,{<<"Application-Name">>, <<"transfer">>}
                          ,{<<"Transfer-Type">>, [<<"blind">>, <<"attended">>]}
+                         ,{<<"Transfer-Leg">>, [<<"bleg">>, <<"both">>]}
                          ,?INSERT_AT_TUPLE
                          ]).
 -define(TRANSFER_TYPES, [{<<"Call-ID">>, fun is_binary/1}
-                        ,{<<"Transfer-Leg">>, fun(T) -> lists:member(T, [<<"bleg">>, <<"both">>]) end}
                         ]).
 
 %% media_macro

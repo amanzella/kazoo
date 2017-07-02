@@ -78,13 +78,13 @@
 -define(ROUTE_REQ_COST_PARAMS, [<<"Min-Increment-Cost">>, <<"Max-Incremental-Cost">>
                                ,<<"Min-Setup-Cost">>, <<"Max-Setup-Cost">>
                                ]).
--define(ROUTE_REQ_TYPES, [{<<"To">>, fun is_binary/1}
-                         ,{<<"From">>, fun is_binary/1}
-                         ,{<<"Request">>, fun is_binary/1}
-                         ,{?KEY_CALL_ID, fun is_binary/1}
-                         ,{<<"Event-Queue">>, fun is_binary/1}
-                         ,{<<"Caller-ID-Name">>, fun is_binary/1}
-                         ,{<<"Caller-ID-Number">>, fun is_binary/1}
+-define(ROUTE_REQ_TYPES, [{<<"To">>, fun erlang:is_binary/1}
+                         ,{<<"From">>, fun erlang:is_binary/1}
+                         ,{<<"Request">>, fun erlang:is_binary/1}
+                         ,{?KEY_CALL_ID, fun erlang:is_binary/1}
+                         ,{<<"Event-Queue">>, fun erlang:is_binary/1}
+                         ,{<<"Caller-ID-Name">>, fun erlang:is_binary/1}
+                         ,{<<"Caller-ID-Number">>, fun erlang:is_binary/1}
                          ,{<<"Cost-Parameters">>, fun has_cost_parameters/1}
                          ,{<<"Custom-Channel-Vars">>, fun kz_json:is_json_object/1}
                          ,{<<"Custom-SIP-Headers">>, fun kz_json:is_json_object/1}
@@ -114,10 +114,10 @@ has_cost_parameters(JObj) ->
                                  ,{<<"Caller-ID-Type">>, [<<"from">>, <<"rpid">>, <<"pid">>]}
                                  ,?INVITE_FORMAT_TUPLE
                                  ]).
--define(ROUTE_RESP_ROUTE_TYPES, [{<<"Codecs">>, fun is_list/1}
-                                ,{<<"Route">>, fun is_binary/1}
-                                ,{<<"To-User">>, fun is_binary/1}
-                                ,{<<"To-Realm">>, fun is_binary/1}
+-define(ROUTE_RESP_ROUTE_TYPES, [{<<"Codecs">>, fun erlang:is_list/1}
+                                ,{<<"Route">>, fun erlang:is_binary/1}
+                                ,{<<"To-User">>, fun erlang:is_binary/1}
+                                ,{<<"To-Realm">>, fun erlang:is_binary/1}
                                 ,{<<"Custom-SIP-Headers">>, fun kz_json:is_json_object/1}
                                 ,{<<"Custom-Channel-Vars">>, fun kz_json:is_json_object/1}
                                 ]).
@@ -139,9 +139,9 @@ has_cost_parameters(JObj) ->
                             }
                            ,{<<"Pre-Park">>, [<<"none">>, <<"ring_ready">>, <<"answer">>]}
                            ]).
--define(ROUTE_RESP_TYPES, [{<<"Route-Error-Code">>, fun is_binary/1}
-                          ,{<<"Route-Error-Message">>, fun is_binary/1}
-                          ,{<<"Routes">>, fun is_list/1}
+-define(ROUTE_RESP_TYPES, [{<<"Route-Error-Code">>, fun erlang:is_binary/1}
+                          ,{<<"Route-Error-Message">>, fun erlang:is_binary/1}
+                          ,{<<"Routes">>, fun erlang:is_list/1}
                           ,{<<"Custom-Channel-Vars">>, fun kz_json:is_json_object/1}
                           ]).
 
@@ -151,8 +151,8 @@ has_cost_parameters(JObj) ->
 -define(ROUTE_WIN_VALUES, [{<<"Event-Category">>, ?EVENT_CATEGORY}
                           ,{<<"Event-Name">>, <<"route_win">>}
                           ]).
--define(ROUTE_WIN_TYPES, [{?KEY_CALL_ID, fun is_binary/1}
-                         ,{?KEY_CONTROL_QUEUE, fun is_binary/1}
+-define(ROUTE_WIN_TYPES, [{?KEY_CALL_ID, fun erlang:is_binary/1}
+                         ,{?KEY_CONTROL_QUEUE, fun erlang:is_binary/1}
                          ,{<<"Custom-Channel-Vars">>, fun kz_json:is_json_object/1}
                          ]).
 
