@@ -1,1 +1,48 @@
-{"type":"object","required":["Target-Call-ID","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.eavesdrop","_id":"kapi.dialplan.eavesdrop","Target-Call-ID":{},"Other-Leg":{},"Move-Channel-If-Necessary":{"type":"boolean"},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Enable-DTMF":{},"Continue-On-Fail":{},"Continue-On-Cancel":{},"Call-ID":{},"Application-Name":{"type":"string","enum":["eavesdrop"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "eavesdrop"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Continue-On-Cancel": {},
+    "Continue-On-Fail": {},
+    "Enable-DTMF": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Move-Channel-If-Necessary": {
+        "type": "boolean"
+    },
+    "Other-Leg": {},
+    "Target-Call-ID": {},
+    "_id": "kapi.dialplan.eavesdrop",
+    "description": "AMQP API for dialplan.eavesdrop",
+    "properties": {},
+    "required": [
+        "Target-Call-ID",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

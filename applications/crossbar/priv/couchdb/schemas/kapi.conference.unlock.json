@@ -1,1 +1,32 @@
-{"type":"object","required":["Conference-ID","Application-Name"],"properties":{},"description":"AMQP API for conference.unlock","_id":"kapi.conference.unlock","Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["unlock"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "unlock"
+        ],
+        "type": "string"
+    },
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.conference.unlock",
+    "description": "AMQP API for conference.unlock",
+    "properties": {},
+    "required": [
+        "Conference-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

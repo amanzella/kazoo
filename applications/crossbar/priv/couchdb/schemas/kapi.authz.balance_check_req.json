@@ -1,1 +1,25 @@
-{"type":"object","required":["Accounts"],"properties":{},"description":"AMQP API for authz.balance_check_req","_id":"kapi.authz.balance_check_req","Event-Name":{"type":"string","enum":["balance_check_req"]},"Event-Category":{"type":"string","enum":["authz"]},"Accounts":{"type":"array"},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Accounts": {
+        "type": "array"
+    },
+    "Event-Category": {
+        "enum": [
+            "authz"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "balance_check_req"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.authz.balance_check_req",
+    "description": "AMQP API for authz.balance_check_req",
+    "properties": {},
+    "required": [
+        "Accounts"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,36 @@
-{"type":"object","required":["Call-ID"],"properties":{"Event-Name":{"type":"string","enum":["lookup_req"]},"Event-Category":{"type":"string","enum":["call_inspector"]}},"description":"AMQP API for inspector.lookup_req","_id":"kapi.inspector.lookup_req","Event-Name":{"type":"string","enum":["lookup_req"]},"Event-Category":{"type":"string","enum":["call_inspector"]},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call_inspector"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "lookup_req"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.inspector.lookup_req",
+    "description": "AMQP API for inspector.lookup_req",
+    "properties": {
+        "Event-Category": {
+            "enum": [
+                "call_inspector"
+            ],
+            "type": "string"
+        },
+        "Event-Name": {
+            "enum": [
+                "lookup_req"
+            ],
+            "type": "string"
+        }
+    },
+    "required": [
+        "Call-ID"
+    ],
+    "type": "object"
+}

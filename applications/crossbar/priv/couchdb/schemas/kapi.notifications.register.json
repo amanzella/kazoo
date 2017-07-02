@@ -1,1 +1,53 @@
-{"type":"object","required":["Account-ID","Realm","Username"],"properties":{},"description":"AMQP API for notifications.register","_id":"kapi.notifications.register","Username":{},"User-Agent":{},"To-User":{},"To-Host":{},"To":{},"Text":{},"Suppress-Unregister-Notify":{},"Subject":{},"Reply-To":{},"Realm":{},"Preview":{},"Owner-ID":{},"Network-Port":{},"Network-IP":{},"HTML":{},"From-User":{},"From-Host":{},"From":{},"Expires":{},"Event-Timestamp":{},"Event-Name":{"type":"string","enum":["register"]},"Event-Category":{"type":"string","enum":["notification"]},"Contact":{},"Cc":{},"Call-ID":{},"Bcc":{},"Authorizing-Type":{},"Authorizing-ID":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Authorizing-ID": {},
+    "Authorizing-Type": {},
+    "Bcc": {},
+    "Call-ID": {},
+    "Cc": {},
+    "Contact": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "register"
+        ],
+        "type": "string"
+    },
+    "Event-Timestamp": {},
+    "Expires": {},
+    "From": {},
+    "From-Host": {},
+    "From-User": {},
+    "HTML": {},
+    "Network-IP": {},
+    "Network-Port": {},
+    "Owner-ID": {},
+    "Preview": {},
+    "Realm": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Suppress-Unregister-Notify": {},
+    "Text": {},
+    "To": {},
+    "To-Host": {},
+    "To-User": {},
+    "User-Agent": {},
+    "Username": {},
+    "_id": "kapi.notifications.register",
+    "description": "AMQP API for notifications.register",
+    "properties": {},
+    "required": [
+        "Account-ID",
+        "Realm",
+        "Username"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,33 @@
-{"type":"object","required":[],"properties":{"Event-Name":{"type":"string","enum":["reload_acls"]},"Event-Category":{"type":"string","enum":["switch_event"]}},"description":"AMQP API for switch.reload_acls","_id":"kapi.switch.reload_acls","Event-Name":{"type":"string","enum":["reload_acls"]},"Event-Category":{"type":"string","enum":["switch_event"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "switch_event"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "reload_acls"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.switch.reload_acls",
+    "description": "AMQP API for switch.reload_acls",
+    "properties": {
+        "Event-Category": {
+            "enum": [
+                "switch_event"
+            ],
+            "type": "string"
+        },
+        "Event-Name": {
+            "enum": [
+                "reload_acls"
+            ],
+            "type": "string"
+        }
+    },
+    "required": [],
+    "type": "object"
+}

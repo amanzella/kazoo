@@ -1,1 +1,88 @@
-{"type":"object","required":["Callee-ID-Number","Caller-ID-Number","Route-ID","Body","Message-ID"],"properties":{},"description":"AMQP API for sms.outbound","_id":"kapi.sms.outbound","User-Agent":{},"To":{"type":"string"},"System-ID":{"type":"string"},"Switch-Nodename":{},"Switch-Hostname":{},"Status":{},"Route-Type":{"type":"string","enum":["on-net","off-net"]},"Route-ID":{},"Request":{"type":"string"},"Orig-Port":{},"Orig-IP":{},"Message-ID":{"type":"string"},"Geo-Location":{},"From-Network-Addr":{},"From":{"type":"string"},"Event-Queue":{"type":"string"},"Event-Name":{"type":"string","enum":["outbound"]},"Event-Category":{"type":"string","enum":["message"]},"Delivery-Result-Code":{},"Delivery-Failure":{},"Custom-SIP-Headers":{"type":"object"},"Custom-Channel-Vars":{"type":"object"},"Contact-Username":{},"Contact-Port":{},"Contact-IP":{},"Contact":{},"Caller-ID-Number":{"type":"string"},"Caller-ID-Name":{"type":"string"},"Callee-ID-Number":{"type":"string"},"Callee-ID-Name":{"type":"string"},"Body":{"type":"string"},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Body": {
+        "type": "string"
+    },
+    "Callee-ID-Name": {
+        "type": "string"
+    },
+    "Callee-ID-Number": {
+        "type": "string"
+    },
+    "Caller-ID-Name": {
+        "type": "string"
+    },
+    "Caller-ID-Number": {
+        "type": "string"
+    },
+    "Contact": {},
+    "Contact-IP": {},
+    "Contact-Port": {},
+    "Contact-Username": {},
+    "Custom-Channel-Vars": {
+        "type": "object"
+    },
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Delivery-Failure": {},
+    "Delivery-Result-Code": {},
+    "Event-Category": {
+        "enum": [
+            "message"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "outbound"
+        ],
+        "type": "string"
+    },
+    "Event-Queue": {
+        "type": "string"
+    },
+    "From": {
+        "type": "string"
+    },
+    "From-Network-Addr": {},
+    "Geo-Location": {},
+    "Message-ID": {
+        "type": "string"
+    },
+    "Orig-IP": {},
+    "Orig-Port": {},
+    "Request": {
+        "type": "string"
+    },
+    "Route-ID": {},
+    "Route-Type": {
+        "enum": [
+            "on-net",
+            "off-net"
+        ],
+        "type": "string"
+    },
+    "Status": {},
+    "Switch-Hostname": {},
+    "Switch-Nodename": {},
+    "System-ID": {
+        "type": "string"
+    },
+    "To": {
+        "type": "string"
+    },
+    "User-Agent": {},
+    "_id": "kapi.sms.outbound",
+    "description": "AMQP API for sms.outbound",
+    "properties": {},
+    "required": [
+        "Callee-ID-Number",
+        "Caller-ID-Number",
+        "Route-ID",
+        "Body",
+        "Message-ID"
+    ],
+    "type": "object"
+}

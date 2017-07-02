@@ -1,1 +1,40 @@
-{"type":"object","required":["Message-Count","Max-Message-Count","Voicemail-Box","Account-ID"],"properties":{},"description":"AMQP API for notifications.voicemail_full","_id":"kapi.notifications.voicemail_full","Voicemail-Box":{},"To":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"Message-Count":{},"Max-Message-Count":{},"HTML":{},"From":{},"Event-Name":{"type":"string","enum":["voicemail_full"]},"Event-Category":{"type":"string","enum":["notification"]},"Cc":{},"Bcc":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Cc": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "voicemail_full"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "HTML": {},
+    "Max-Message-Count": {},
+    "Message-Count": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "To": {},
+    "Voicemail-Box": {},
+    "_id": "kapi.notifications.voicemail_full",
+    "description": "AMQP API for notifications.voicemail_full",
+    "properties": {},
+    "required": [
+        "Message-Count",
+        "Max-Message-Count",
+        "Voicemail-Box",
+        "Account-ID"
+    ],
+    "type": "object"
+}

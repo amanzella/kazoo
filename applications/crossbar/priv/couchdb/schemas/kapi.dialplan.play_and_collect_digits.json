@@ -1,1 +1,73 @@
-{"type":"object","required":["Terminators","Timeout","Digits-Regex","Media-Tries","Media-Name","Maximum-Digits","Minimum-Digits","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.play_and_collect_digits","_id":"kapi.dialplan.play_and_collect_digits","Timeout":{},"Terminators":{"type":"array","items":{"type":"string","enum":["1","2","3","4","5","6","7","8","9","*","0","#"]}},"Minimum-Digits":{},"Media-Tries":{},"Media-Name":{},"Maximum-Digits":{},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Failed-Media-Name":{},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Digits-Regex":{},"Call-ID":{},"Application-Name":{"type":"string","enum":["play_and_collect_digits"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "play_and_collect_digits"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Digits-Regex": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Failed-Media-Name": {},
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Maximum-Digits": {},
+    "Media-Name": {},
+    "Media-Tries": {},
+    "Minimum-Digits": {},
+    "Terminators": {
+        "items": {
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "7",
+                "8",
+                "9",
+                "*",
+                "0",
+                "#"
+            ],
+            "type": "string"
+        },
+        "type": "array"
+    },
+    "Timeout": {},
+    "_id": "kapi.dialplan.play_and_collect_digits",
+    "description": "AMQP API for dialplan.play_and_collect_digits",
+    "properties": {},
+    "required": [
+        "Terminators",
+        "Timeout",
+        "Digits-Regex",
+        "Media-Tries",
+        "Media-Name",
+        "Maximum-Digits",
+        "Minimum-Digits",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

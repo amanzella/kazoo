@@ -1,1 +1,45 @@
-{"type":"object","required":["Value","Parameter","Conference-ID","Application-Name"],"properties":{},"description":"AMQP API for conference.set","_id":"kapi.conference.set","Value":{"type":"string"},"Parameter":{"type":"string","enum":["Max-Members","Caller-ID-Name","Caller-ID-Number"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["set"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "set"
+        ],
+        "type": "string"
+    },
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Parameter": {
+        "enum": [
+            "Max-Members",
+            "Caller-ID-Name",
+            "Caller-ID-Number"
+        ],
+        "type": "string"
+    },
+    "Value": {
+        "type": "string"
+    },
+    "_id": "kapi.conference.set",
+    "description": "AMQP API for conference.set",
+    "properties": {},
+    "required": [
+        "Value",
+        "Parameter",
+        "Conference-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

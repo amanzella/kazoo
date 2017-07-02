@@ -1,1 +1,41 @@
-{"type":"object","required":["Account-ID","Errors","Fax-From-Email"],"properties":{"Errors":{}},"description":"AMQP API for notifications.fax_outbound_smtp_error","_id":"kapi.notifications.fax_outbound_smtp_error","To":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"HTML":{},"From":{},"Fax-To-Email":{},"Fax-From-Email":{},"Event-Name":{"type":"string","enum":["outbound_smtp_fax_error"]},"Event-Category":{"type":"string","enum":["notification"]},"Errors":{},"Cc":{},"Bcc":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Cc": {},
+    "Errors": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "outbound_smtp_fax_error"
+        ],
+        "type": "string"
+    },
+    "Fax-From-Email": {},
+    "Fax-To-Email": {},
+    "From": {},
+    "HTML": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "To": {},
+    "_id": "kapi.notifications.fax_outbound_smtp_error",
+    "description": "AMQP API for notifications.fax_outbound_smtp_error",
+    "properties": {
+        "Errors": {}
+    },
+    "required": [
+        "Account-ID",
+        "Errors",
+        "Fax-From-Email"
+    ],
+    "type": "object"
+}

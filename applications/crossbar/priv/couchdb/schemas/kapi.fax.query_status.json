@@ -1,1 +1,23 @@
-{"type":"object","required":["Job-ID"],"properties":{},"description":"AMQP API for fax.query_status","_id":"kapi.fax.query_status","Job-ID":{},"Event-Name":{"type":"string","enum":["query_status"]},"Event-Category":{"type":"string","enum":["fax"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "fax"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "query_status"
+        ],
+        "type": "string"
+    },
+    "Job-ID": {},
+    "_id": "kapi.fax.query_status",
+    "description": "AMQP API for fax.query_status",
+    "properties": {},
+    "required": [
+        "Job-ID"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,27 @@
-{"type":"object","required":[],"properties":{"Fields":{},"Count-Only":{}},"description":"AMQP API for registration.query_req","_id":"kapi.registration.query_req","Username":{},"Realm":{},"Fields":{},"Event-Name":{"type":"string","enum":["reg_query"]},"Event-Category":{"type":"string","enum":["directory"]},"Count-Only":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Count-Only": {},
+    "Event-Category": {
+        "enum": [
+            "directory"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "reg_query"
+        ],
+        "type": "string"
+    },
+    "Fields": {},
+    "Realm": {},
+    "Username": {},
+    "_id": "kapi.registration.query_req",
+    "description": "AMQP API for registration.query_req",
+    "properties": {
+        "Count-Only": {},
+        "Fields": {}
+    },
+    "required": [],
+    "type": "object"
+}

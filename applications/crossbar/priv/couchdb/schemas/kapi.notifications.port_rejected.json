@@ -1,1 +1,40 @@
-{"type":"object","required":["Account-ID"],"properties":{},"description":"AMQP API for notifications.port_rejected","_id":"kapi.notifications.port_rejected","To":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"Port-Request-ID":{},"Port":{},"Number-State":{},"Number":{},"Local-Number":{},"HTML":{},"From":{},"Event-Name":{"type":"string","enum":["port_rejected"]},"Event-Category":{"type":"string","enum":["notification"]},"Cc":{},"Bcc":{},"Authorized-By":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Authorized-By": {},
+    "Bcc": {},
+    "Cc": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "port_rejected"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "HTML": {},
+    "Local-Number": {},
+    "Number": {},
+    "Number-State": {},
+    "Port": {},
+    "Port-Request-ID": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "To": {},
+    "_id": "kapi.notifications.port_rejected",
+    "description": "AMQP API for notifications.port_rejected",
+    "properties": {},
+    "required": [
+        "Account-ID"
+    ],
+    "type": "object"
+}

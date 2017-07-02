@@ -1,1 +1,31 @@
-{"type":"object","required":["Status"],"properties":{},"description":"AMQP API for resource.eavesdrop_resp","_id":"kapi.resource.eavesdrop_resp","Status":{"type":"string","enum":["started","error"]},"Event-Name":{"type":"string","enum":["eavesdrop_resp"]},"Event-Category":{"type":"string","enum":["resource"]},"Error-Msg":{},"Eavesdropper-Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Eavesdropper-Call-ID": {},
+    "Error-Msg": {},
+    "Event-Category": {
+        "enum": [
+            "resource"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "eavesdrop_resp"
+        ],
+        "type": "string"
+    },
+    "Status": {
+        "enum": [
+            "started",
+            "error"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.resource.eavesdrop_resp",
+    "description": "AMQP API for resource.eavesdrop_resp",
+    "properties": {},
+    "required": [
+        "Status"
+    ],
+    "type": "object"
+}

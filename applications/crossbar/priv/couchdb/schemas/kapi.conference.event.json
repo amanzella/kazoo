@@ -1,1 +1,34 @@
-{"type":"object","required":["Instance-ID","Conference-ID","Event"],"properties":{},"description":"AMQP API for conference.event","_id":"kapi.conference.event","Participant-ID":{},"Instance-ID":{},"Event-Name":{"type":"string","enum":["event"]},"Event-Category":{"type":"string","enum":["conference"]},"Event":{},"Custom-Channel-Vars":{},"Conference-ID":{},"Conference-Channel-Vars":{},"Channel-Presence-ID":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call-ID": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Channel-Presence-ID": {},
+    "Conference-Channel-Vars": {},
+    "Conference-ID": {},
+    "Custom-Channel-Vars": {},
+    "Event": {},
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "event"
+        ],
+        "type": "string"
+    },
+    "Instance-ID": {},
+    "Participant-ID": {},
+    "_id": "kapi.conference.event",
+    "description": "AMQP API for conference.event",
+    "properties": {},
+    "required": [
+        "Instance-ID",
+        "Conference-ID",
+        "Event"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,34 @@
-{"type":"object","required":["Participant-ID","Conference-ID","Application-Name"],"properties":{},"description":"AMQP API for conference.undeaf_participant","_id":"kapi.conference.undeaf_participant","Participant-ID":{},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["undeaf_participant"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "undeaf_participant"
+        ],
+        "type": "string"
+    },
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Participant-ID": {},
+    "_id": "kapi.conference.undeaf_participant",
+    "description": "AMQP API for conference.undeaf_participant",
+    "properties": {},
+    "required": [
+        "Participant-ID",
+        "Conference-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

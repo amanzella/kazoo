@@ -1,1 +1,48 @@
-{"type":"object","required":["Action","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.hold_control","_id":"kapi.dialplan.hold_control","Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["hold_control"]},"Action":{"type":"string","enum":["hold","unhold","toggle"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Action": {
+        "enum": [
+            "hold",
+            "unhold",
+            "toggle"
+        ],
+        "type": "string"
+    },
+    "Application-Name": {
+        "enum": [
+            "hold_control"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.hold_control",
+    "description": "AMQP API for dialplan.hold_control",
+    "properties": {},
+    "required": [
+        "Action",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

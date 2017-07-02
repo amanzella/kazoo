@@ -1,1 +1,46 @@
-{"type":"object","required":["Response-Code","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.respond","_id":"kapi.dialplan.respond","Response-Message":{"type":"string"},"Response-Code":{"type":"string"},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["respond"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "respond"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Response-Code": {
+        "type": "string"
+    },
+    "Response-Message": {
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.respond",
+    "description": "AMQP API for dialplan.respond",
+    "properties": {},
+    "required": [
+        "Response-Code",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

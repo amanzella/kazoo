@@ -1,1 +1,51 @@
-{"type":"object","required":["To-DID"],"properties":{},"description":"AMQP API for rate.req","_id":"kapi.rate.req","To-DID":{},"Send-Empty":{"type":"boolean"},"Resource-Type":{"type":"string","enum":["audio","video","sms"]},"Resource-ID":{},"Ratedeck-ID":{},"Outbound-Flags":{},"Options":{"type":"array"},"From-DID":{},"Event-Name":{"type":"string","enum":["req"]},"Event-Category":{"type":"string","enum":["rate"]},"Direction":{"type":"string","enum":["inbound","outbound"]},"Call-ID":{},"Authorizing-Type":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Authorizing-Type": {},
+    "Call-ID": {},
+    "Direction": {
+        "enum": [
+            "inbound",
+            "outbound"
+        ],
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "rate"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "req"
+        ],
+        "type": "string"
+    },
+    "From-DID": {},
+    "Options": {
+        "type": "array"
+    },
+    "Outbound-Flags": {},
+    "Ratedeck-ID": {},
+    "Resource-ID": {},
+    "Resource-Type": {
+        "enum": [
+            "audio",
+            "video",
+            "sms"
+        ],
+        "type": "string"
+    },
+    "Send-Empty": {
+        "type": "boolean"
+    },
+    "To-DID": {},
+    "_id": "kapi.rate.req",
+    "description": "AMQP API for rate.req",
+    "properties": {},
+    "required": [
+        "To-DID"
+    ],
+    "type": "object"
+}

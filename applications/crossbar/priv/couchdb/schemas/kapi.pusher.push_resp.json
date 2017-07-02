@@ -1,1 +1,23 @@
-{"type":"object","required":["Token-ID"],"properties":{},"description":"AMQP API for pusher.push_resp","_id":"kapi.pusher.push_resp","Token-ID":{},"Event-Name":{"type":"string","enum":["push_resp"]},"Event-Category":{"type":"string","enum":["notification"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "push_resp"
+        ],
+        "type": "string"
+    },
+    "Token-ID": {},
+    "_id": "kapi.pusher.push_resp",
+    "description": "AMQP API for pusher.push_resp",
+    "properties": {},
+    "required": [
+        "Token-ID"
+    ],
+    "type": "object"
+}

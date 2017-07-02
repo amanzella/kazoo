@@ -1,1 +1,44 @@
-{"type":"object","required":["State","Presence-ID"],"properties":{},"description":"AMQP API for presence.update","_id":"kapi.presence.update","To-Tag":{},"To":{},"Target-Call-ID":{},"Switch-URI":{},"State":{"type":"string","enum":["trying","online","offline","early","confirmed","terminated"]},"Presence-ID":{},"From-Tag":{},"From":{},"Event-Package":{},"Event-Name":{"type":"string","enum":["update"]},"Event-Category":{"type":"string","enum":["presence"]},"Call-ID":{},"Call-Direction":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call-Direction": {},
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "presence"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "update"
+        ],
+        "type": "string"
+    },
+    "Event-Package": {},
+    "From": {},
+    "From-Tag": {},
+    "Presence-ID": {},
+    "State": {
+        "enum": [
+            "trying",
+            "online",
+            "offline",
+            "early",
+            "confirmed",
+            "terminated"
+        ],
+        "type": "string"
+    },
+    "Switch-URI": {},
+    "Target-Call-ID": {},
+    "To": {},
+    "To-Tag": {},
+    "_id": "kapi.presence.update",
+    "description": "AMQP API for presence.update",
+    "properties": {},
+    "required": [
+        "State",
+        "Presence-ID"
+    ],
+    "type": "object"
+}

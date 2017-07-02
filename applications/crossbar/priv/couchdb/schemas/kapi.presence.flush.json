@@ -1,1 +1,25 @@
-{"type":"object","required":["Type"],"properties":{},"description":"AMQP API for presence.flush","_id":"kapi.presence.flush","User":{},"Type":{},"Event-Package":{},"Event-Name":{"type":"string","enum":["flush"]},"Event-Category":{"type":"string","enum":["presence"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "presence"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "flush"
+        ],
+        "type": "string"
+    },
+    "Event-Package": {},
+    "Type": {},
+    "User": {},
+    "_id": "kapi.presence.flush",
+    "description": "AMQP API for presence.flush",
+    "properties": {},
+    "required": [
+        "Type"
+    ],
+    "type": "object"
+}

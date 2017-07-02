@@ -1,1 +1,29 @@
-{"type":"object","required":["Account-ID"],"properties":{},"description":"AMQP API for acdc_agent.stats_resp","_id":"kapi.acdc_agent.stats_resp","Stats":{"type":"object"},"Event-Name":{"type":"string","enum":["stats_resp"]},"Event-Category":{"type":"string","enum":["agent"]},"Current-Statuses":{},"Current-Stats":{},"Current-Calls":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Current-Calls": {},
+    "Current-Stats": {},
+    "Current-Statuses": {},
+    "Event-Category": {
+        "enum": [
+            "agent"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "stats_resp"
+        ],
+        "type": "string"
+    },
+    "Stats": {
+        "type": "object"
+    },
+    "_id": "kapi.acdc_agent.stats_resp",
+    "description": "AMQP API for acdc_agent.stats_resp",
+    "properties": {},
+    "required": [
+        "Account-ID"
+    ],
+    "type": "object"
+}

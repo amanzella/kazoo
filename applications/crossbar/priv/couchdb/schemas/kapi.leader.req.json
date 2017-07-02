@@ -1,1 +1,9 @@
-{"type":"object","required":[],"properties":{},"description":"AMQP API for leader.req","_id":"kapi.leader.req","Message":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Message": {},
+    "_id": "kapi.leader.req",
+    "description": "AMQP API for leader.req",
+    "properties": {},
+    "required": [],
+    "type": "object"
+}

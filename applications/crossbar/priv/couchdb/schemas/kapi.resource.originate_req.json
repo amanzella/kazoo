@@ -1,1 +1,112 @@
-{"type":"object","required":["Application-Name","Endpoints"],"properties":{},"description":"AMQP API for resource.originate_req","_id":"kapi.resource.originate_req","Timeout":{},"Start-Control-Process":{},"Simplify-Loopback":{},"Simplify-Bowout":{"type":"boolean"},"Secure-RTP":{},"SIP-Transport":{},"Ringback":{},"Outbound-Caller-ID-Number":{},"Outbound-Caller-ID-Name":{},"Outbound-Callee-ID-Number":{},"Outbound-Callee-ID-Name":{},"Outbound-Call-ID":{},"Originate-Immediate":{},"Media":{"type":"string","enum":["process","bypass","auto"]},"Loopback-Bowout":{},"Intercept-Unbridged-Only":{},"Insert-At":{},"Ignore-Forward":{},"Ignore-Early-Media":{},"Ignore-Completed-Elsewhere":{},"Hold-Media":{},"Force-Fax":{},"Fax-Timezone":{},"Fax-Identity-Number":{},"Fax-Identity-Name":{},"Fail-On-Single-Reject":{},"Export-Custom-Channel-Vars":{},"Existing-Call-ID":{},"Event-Name":{"type":"string","enum":["originate_req"]},"Event-Category":{"type":"string","enum":["resource"]},"Endpoints":{"type":"array"},"Enable-T38-Passthrough":{},"Enable-T38-Gateway":{},"Enable-T38-Fax-Request":{},"Enable-T38-Fax":{},"Eavesdrop-Mode":{"type":"string","enum":["listen","whisper","full"]},"Eavesdrop-Group-ID":{},"Eavesdrop-Call-ID":{},"Dial-Endpoint-Method":{"type":"string","enum":["single","simultaneous"]},"Custom-SIP-Headers":{"type":"object"},"Custom-Channel-Vars":{"type":"object"},"Continue-On-Fail":{"type":"boolean"},"Confirm-Key":{},"Confirm-File":{},"Confirm-Cancel-Timeout":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Callee-ID-Number":{},"Callee-ID-Name":{},"B-Leg-Events":{},"Application-Name":{"type":"string","enum":["park","bridge","transfer","fax","eavesdrop"]},"Application-Data":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Data": {},
+    "Application-Name": {
+        "enum": [
+            "park",
+            "bridge",
+            "transfer",
+            "fax",
+            "eavesdrop"
+        ],
+        "type": "string"
+    },
+    "B-Leg-Events": {},
+    "Callee-ID-Name": {},
+    "Callee-ID-Number": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Confirm-Cancel-Timeout": {},
+    "Confirm-File": {},
+    "Confirm-Key": {},
+    "Continue-On-Fail": {
+        "type": "boolean"
+    },
+    "Custom-Channel-Vars": {
+        "type": "object"
+    },
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Dial-Endpoint-Method": {
+        "enum": [
+            "single",
+            "simultaneous"
+        ],
+        "type": "string"
+    },
+    "Eavesdrop-Call-ID": {},
+    "Eavesdrop-Group-ID": {},
+    "Eavesdrop-Mode": {
+        "enum": [
+            "listen",
+            "whisper",
+            "full"
+        ],
+        "type": "string"
+    },
+    "Enable-T38-Fax": {},
+    "Enable-T38-Fax-Request": {},
+    "Enable-T38-Gateway": {},
+    "Enable-T38-Passthrough": {},
+    "Endpoints": {
+        "type": "array"
+    },
+    "Event-Category": {
+        "enum": [
+            "resource"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "originate_req"
+        ],
+        "type": "string"
+    },
+    "Existing-Call-ID": {},
+    "Export-Custom-Channel-Vars": {},
+    "Fail-On-Single-Reject": {},
+    "Fax-Identity-Name": {},
+    "Fax-Identity-Number": {},
+    "Fax-Timezone": {},
+    "Force-Fax": {},
+    "Hold-Media": {},
+    "Ignore-Completed-Elsewhere": {},
+    "Ignore-Early-Media": {},
+    "Ignore-Forward": {},
+    "Insert-At": {},
+    "Intercept-Unbridged-Only": {},
+    "Loopback-Bowout": {},
+    "Media": {
+        "enum": [
+            "process",
+            "bypass",
+            "auto"
+        ],
+        "type": "string"
+    },
+    "Originate-Immediate": {},
+    "Outbound-Call-ID": {},
+    "Outbound-Callee-ID-Name": {},
+    "Outbound-Callee-ID-Number": {},
+    "Outbound-Caller-ID-Name": {},
+    "Outbound-Caller-ID-Number": {},
+    "Ringback": {},
+    "SIP-Transport": {},
+    "Secure-RTP": {},
+    "Simplify-Bowout": {
+        "type": "boolean"
+    },
+    "Simplify-Loopback": {},
+    "Start-Control-Process": {},
+    "Timeout": {},
+    "_id": "kapi.resource.originate_req",
+    "description": "AMQP API for resource.originate_req",
+    "properties": {},
+    "required": [
+        "Application-Name",
+        "Endpoints"
+    ],
+    "type": "object"
+}

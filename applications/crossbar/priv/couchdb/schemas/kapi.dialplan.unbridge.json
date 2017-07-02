@@ -1,1 +1,47 @@
-{"type":"object","required":["Application-Name","Call-ID"],"properties":{},"description":"AMQP API for dialplan.unbridge","_id":"kapi.dialplan.unbridge","Leg":{"type":"string","enum":["A","B","Both"]},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["unbridge"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "unbridge"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Leg": {
+        "enum": [
+            "A",
+            "B",
+            "Both"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.unbridge",
+    "description": "AMQP API for dialplan.unbridge",
+    "properties": {},
+    "required": [
+        "Application-Name",
+        "Call-ID"
+    ],
+    "type": "object"
+}

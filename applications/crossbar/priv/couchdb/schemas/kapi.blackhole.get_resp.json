@@ -1,1 +1,21 @@
-{"type":"object","required":[],"properties":{},"description":"AMQP API for blackhole.get_resp","_id":"kapi.blackhole.get_resp","Event-Name":{"type":"string","enum":["get_resp"]},"Event-Category":{"type":"string","enum":["blackhole"]},"Data":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Data": {},
+    "Event-Category": {
+        "enum": [
+            "blackhole"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "get_resp"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.blackhole.get_resp",
+    "description": "AMQP API for blackhole.get_resp",
+    "properties": {},
+    "required": [],
+    "type": "object"
+}

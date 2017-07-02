@@ -1,1 +1,32 @@
-{"type":"object","required":["Account-ID"],"properties":{},"description":"AMQP API for call.query_account_channels_req","_id":"kapi.call.query_account_channels_req","Usernames":{"type":"array"},"Username":{"type":"string"},"Event-Name":{"type":"string","enum":["query_account_channels_req"]},"Event-Category":{"type":"string","enum":["call_event"]},"Active-Only":{"type":"boolean"},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Active-Only": {
+        "type": "boolean"
+    },
+    "Event-Category": {
+        "enum": [
+            "call_event"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "query_account_channels_req"
+        ],
+        "type": "string"
+    },
+    "Username": {
+        "type": "string"
+    },
+    "Usernames": {
+        "type": "array"
+    },
+    "_id": "kapi.call.query_account_channels_req",
+    "description": "AMQP API for call.query_account_channels_req",
+    "properties": {},
+    "required": [
+        "Account-ID"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,40 @@
-{"type":"object","required":["Media-Macro","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.play_macro","_id":"kapi.dialplan.play_macro","Media-Macro":{},"Insert-At":{"type":"string","enum":["now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["play_macro"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "play_macro"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "now"
+        ],
+        "type": "string"
+    },
+    "Media-Macro": {},
+    "_id": "kapi.dialplan.play_macro",
+    "description": "AMQP API for dialplan.play_macro",
+    "properties": {},
+    "required": [
+        "Media-Macro",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

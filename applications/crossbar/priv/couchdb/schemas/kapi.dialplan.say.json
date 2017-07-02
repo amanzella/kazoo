@@ -1,1 +1,86 @@
-{"type":"object","required":["Say-Text","Method","Type","Language","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.say","_id":"kapi.dialplan.say","Type":{"type":"string","enum":["number","items","persons","messages","currency","time_measurement","current_date","current_time","current_date_time","telephone_number","telephone_extension","url","ip_address","e-mail_address","postal_address","account_number","name_spelled","name_phonetic","short_date_time"]},"Say-Text":{},"Method":{"type":"string","enum":["none","pronounced","iterated","counted"]},"Language":{},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Gender":{"type":"string","enum":["masculine","feminine","neuter"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["say"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "say"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Gender": {
+        "enum": [
+            "masculine",
+            "feminine",
+            "neuter"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Language": {},
+    "Method": {
+        "enum": [
+            "none",
+            "pronounced",
+            "iterated",
+            "counted"
+        ],
+        "type": "string"
+    },
+    "Say-Text": {},
+    "Type": {
+        "enum": [
+            "number",
+            "items",
+            "persons",
+            "messages",
+            "currency",
+            "time_measurement",
+            "current_date",
+            "current_time",
+            "current_date_time",
+            "telephone_number",
+            "telephone_extension",
+            "url",
+            "ip_address",
+            "e-mail_address",
+            "postal_address",
+            "account_number",
+            "name_spelled",
+            "name_phonetic",
+            "short_date_time"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.say",
+    "description": "AMQP API for dialplan.say",
+    "properties": {},
+    "required": [
+        "Say-Text",
+        "Method",
+        "Type",
+        "Language",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

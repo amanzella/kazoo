@@ -1,1 +1,70 @@
-{"type":"object","required":["Message-ID","Call-ID"],"properties":{},"description":"AMQP API for sms.delivery","_id":"kapi.sms.delivery","User-Agent":{},"To":{"type":"string"},"Switch-Nodename":{},"Switch-Hostname":{},"Status":{},"Request":{"type":"string"},"Orig-Port":{},"Orig-IP":{},"Message-ID":{"type":"string"},"Geo-Location":{},"From-Network-Addr":{},"From":{"type":"string"},"Event-Queue":{"type":"string"},"Event-Name":{"type":"string","enum":["delivery"]},"Event-Category":{"type":"string","enum":["message"]},"Error-Message":{},"Error-Code":{},"Delivery-Result-Text":{},"Delivery-Result-Code":{},"Delivery-Failure":{},"Custom-SIP-Headers":{"type":"object"},"Custom-Channel-Vars":{"type":"object"},"Contact-Username":{},"Contact-Port":{},"Contact-IP":{},"Contact":{},"Caller-ID-Number":{"type":"string"},"Caller-ID-Name":{"type":"string"},"Call-ID":{},"Body":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Body": {},
+    "Call-ID": {},
+    "Caller-ID-Name": {
+        "type": "string"
+    },
+    "Caller-ID-Number": {
+        "type": "string"
+    },
+    "Contact": {},
+    "Contact-IP": {},
+    "Contact-Port": {},
+    "Contact-Username": {},
+    "Custom-Channel-Vars": {
+        "type": "object"
+    },
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Delivery-Failure": {},
+    "Delivery-Result-Code": {},
+    "Delivery-Result-Text": {},
+    "Error-Code": {},
+    "Error-Message": {},
+    "Event-Category": {
+        "enum": [
+            "message"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "delivery"
+        ],
+        "type": "string"
+    },
+    "Event-Queue": {
+        "type": "string"
+    },
+    "From": {
+        "type": "string"
+    },
+    "From-Network-Addr": {},
+    "Geo-Location": {},
+    "Message-ID": {
+        "type": "string"
+    },
+    "Orig-IP": {},
+    "Orig-Port": {},
+    "Request": {
+        "type": "string"
+    },
+    "Status": {},
+    "Switch-Hostname": {},
+    "Switch-Nodename": {},
+    "To": {
+        "type": "string"
+    },
+    "User-Agent": {},
+    "_id": "kapi.sms.delivery",
+    "description": "AMQP API for sms.delivery",
+    "properties": {},
+    "required": [
+        "Message-ID",
+        "Call-ID"
+    ],
+    "type": "object"
+}

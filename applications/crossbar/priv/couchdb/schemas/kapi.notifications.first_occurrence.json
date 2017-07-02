@@ -1,1 +1,36 @@
-{"type":"object","required":["Occurrence","Account-ID"],"properties":{},"description":"AMQP API for notifications.first_occurrence","_id":"kapi.notifications.first_occurrence","To":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"Occurrence":{},"HTML":{},"From":{},"Event-Name":{"type":"string","enum":["first_occurrence"]},"Event-Category":{"type":"string","enum":["notification"]},"Cc":{},"Bcc":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Cc": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "first_occurrence"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "HTML": {},
+    "Occurrence": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "To": {},
+    "_id": "kapi.notifications.first_occurrence",
+    "description": "AMQP API for notifications.first_occurrence",
+    "properties": {},
+    "required": [
+        "Occurrence",
+        "Account-ID"
+    ],
+    "type": "object"
+}

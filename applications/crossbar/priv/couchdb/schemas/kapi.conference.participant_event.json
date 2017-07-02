@@ -1,1 +1,57 @@
-{"type":"object","required":["Custom-Channel-Vars","Channel-Presence-ID","Caller-ID-Number","Caller-ID-Name","Mute-Detect","Video","Energy-Level","Current-Energy","Talking","Speak","Hear","Floor","Participant-ID","Instance-ID","Conference-ID","Focus","Call-ID","Event"],"properties":{},"description":"AMQP API for conference.participant_event","_id":"kapi.conference.participant_event","Video":{},"Talking":{},"Speak":{},"Participant-ID":{},"Mute-Detect":{},"Instance-ID":{},"Hear":{},"Focus":{},"Floor":{},"Event-Name":{"type":"string","enum":["participant_event"]},"Event-Category":{"type":"string","enum":["conference"]},"Event":{},"Energy-Level":{},"Custom-Channel-Vars":{},"Current-Energy":{},"Conference-ID":{},"Channel-Presence-ID":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call-ID": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Channel-Presence-ID": {},
+    "Conference-ID": {},
+    "Current-Energy": {},
+    "Custom-Channel-Vars": {},
+    "Energy-Level": {},
+    "Event": {},
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "participant_event"
+        ],
+        "type": "string"
+    },
+    "Floor": {},
+    "Focus": {},
+    "Hear": {},
+    "Instance-ID": {},
+    "Mute-Detect": {},
+    "Participant-ID": {},
+    "Speak": {},
+    "Talking": {},
+    "Video": {},
+    "_id": "kapi.conference.participant_event",
+    "description": "AMQP API for conference.participant_event",
+    "properties": {},
+    "required": [
+        "Custom-Channel-Vars",
+        "Channel-Presence-ID",
+        "Caller-ID-Number",
+        "Caller-ID-Name",
+        "Mute-Detect",
+        "Video",
+        "Energy-Level",
+        "Current-Energy",
+        "Talking",
+        "Speak",
+        "Hear",
+        "Floor",
+        "Participant-ID",
+        "Instance-ID",
+        "Conference-ID",
+        "Focus",
+        "Call-ID",
+        "Event"
+    ],
+    "type": "object"
+}

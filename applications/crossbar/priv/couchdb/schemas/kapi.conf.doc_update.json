@@ -1,1 +1,45 @@
-{"type":"object","required":["Database","ID"],"properties":{},"description":"AMQP API for conf.doc_update","_id":"kapi.conf.doc_update","Version":{},"Type":{},"Rev":{"type":"string"},"Origin-Cache":{},"Is-Soft-Deleted":{"type":"boolean"},"ID":{"type":"string"},"Event-Name":{"type":"string","enum":["doc_edited","doc_created","doc_deleted","db_edited","db_created","db_deleted"]},"Event-Category":{"type":"string","enum":["configuration"]},"Doc":{},"Date-Modified":{},"Date-Created":{},"Database":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Database": {},
+    "Date-Created": {},
+    "Date-Modified": {},
+    "Doc": {},
+    "Event-Category": {
+        "enum": [
+            "configuration"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "doc_edited",
+            "doc_created",
+            "doc_deleted",
+            "db_edited",
+            "db_created",
+            "db_deleted"
+        ],
+        "type": "string"
+    },
+    "ID": {
+        "type": "string"
+    },
+    "Is-Soft-Deleted": {
+        "type": "boolean"
+    },
+    "Origin-Cache": {},
+    "Rev": {
+        "type": "string"
+    },
+    "Type": {},
+    "Version": {},
+    "_id": "kapi.conf.doc_update",
+    "description": "AMQP API for conf.doc_update",
+    "properties": {},
+    "required": [
+        "Database",
+        "ID"
+    ],
+    "type": "object"
+}
