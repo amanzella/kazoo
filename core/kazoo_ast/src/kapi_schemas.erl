@@ -1,7 +1,7 @@
 -module(kapi_schemas).
 
--export([process/0
-        ,to_schemas/0
+-export([process/0, process/1
+        ,to_schemas/0, to_schema/1
         ]).
 
 -include_lib("kazoo/include/kz_types.hrl").
@@ -9,19 +9,19 @@
 -include_lib("kazoo_ast/include/kz_ast.hrl").
 -include_lib("kazoo_amqp/src/api/kapi_presence.hrl").
 
-%% #{"route" := #{"req" := {[properties]}}}
--type schema_map() :: #{ne_binary() := kz_json:object()}.
--type schemas_map() :: #{module() := schema_map()}.
-
 -record(acc, {kapi_name :: ne_binary() %% s/kapi_(.+)/\1/
              ,api_name = <<"empty">> :: api_ne_binary() %% api function
-             ,schemas = #{} :: schemas_map()
+             ,schemas = kz_json:new() :: kz_json:object()
              }).
 -type acc() :: #acc{}.
 
 -spec to_schemas() -> 'ok'.
+-spec to_schema(module()) -> 'ok'.
 to_schemas() ->
     lists:foreach(fun update_schema/1, process()).
+
+to_schema(KapiModule) ->
+    update_schema(process(KapiModule)).
 
 update_schema(GeneratedJObj) ->
     ID = kz_doc:id(GeneratedJObj),
@@ -43,6 +43,7 @@ existing_schema(Name) ->
     end.
 
 -spec process() -> acc().
+-spec process(module()) -> acc().
 process() ->
     io:format("process kapi modules: "),
     Options = [{'expression', fun expression_to_schema/2}
@@ -50,18 +51,30 @@ process() ->
               ,{'module', fun print_dot/2}
               ,{'accumulator', #acc{}}
               ],
-    #acc{schemas=SchemasMap} = kazoo_ast:walk_project(Options),
-    io:format(" done~n"),
-    schemas_map_to_list(SchemasMap).
+    #acc{schemas=Schemas} = kazoo_ast:walk_project(Options),
+    io:format(" done~n~p~n", [Schemas]),
+    schemas_to_list(Schemas).
 
-schemas_map_to_list(SchemasMap) ->
-    maps:fold(fun schema_api_to_list/3, [], SchemasMap).
+process(KapiModule) ->
+    io:format("process kapi module ~s: ", [KapiModule]),
+    Options = [{'expression', fun expression_to_schema/2}
+              ,{'function', fun set_function/2}
+              ,{'module', fun print_dot/2}
+              ,{'accumulator', #acc{}}
+              ],
+    #acc{schemas=Schemas} = kazoo_ast:walk_modules([KapiModule], Options),
+    io:format(" done~n~p~n", [Schemas]),
+    schemas_to_list(Schemas).
+
+schemas_to_list(Schemas) ->
+    kz_json:foldl(fun schema_api_to_list/3, [], Schemas).
 
 schema_api_to_list(_KAPI, API, Acc0) ->
-    maps:fold(fun(_, Schema, Acc) -> [Schema | Acc] end
-             ,Acc0
-             ,API
-             ).
+    io:format("extracting kapi ~s~n", [_KAPI]),
+    kz_json:foldl(fun(_A, Schema, Acc) -> io:format("extracting api ~s~n", [_A]), [Schema | Acc] end
+                 ,Acc0
+                 ,API
+                 ).
 
 -spec print_dot(ne_binary() | module(), acc()) ->
                        acc() |
@@ -73,27 +86,31 @@ print_dot(<<"kapi_", Module/binary>>, #acc{}=Acc) ->
     Acc#acc{kapi_name=Module};
 print_dot(<<_/binary>>, #acc{}=Acc) ->
     {'skip', Acc};
-print_dot(Module, Acc) ->
-    print_dot(kz_term:to_binary(Module), #acc{}=Acc).
+print_dot(Module, #acc{}=Acc) ->
+    print_dot(kz_term:to_binary(Module), Acc).
 
 -spec set_function(ne_binary() | function(), acc()) -> acc().
 set_function(<<_/binary>> = Function, #acc{}=Acc) ->
     case kz_binary:reverse(Function) of
         <<"v_", Nuf/binary>> ->
             Fun = kz_binary:reverse(Nuf),
+            io:format("function ~s~n", [Fun]),
             Acc#acc{api_name=Fun};
         _ ->
+            io:format("function ~s~n", [Function]),
             Acc#acc{api_name=Function}
     end;
 set_function(Function, Acc) ->
     set_function(kz_term:to_binary(Function), Acc).
 
 expression_to_schema(?MOD_FUN_ARGS('kz_api', 'build_message', [_Prop, Required, Optional]), Acc) ->
+    io:format("process builder for ~p~n", [Acc#acc.api_name]),
     properties_to_schema(kz_ast_util:ast_to_list_of_binaries(Required)
                         ,optional_validators(Optional)
                         ,Acc
                         );
 expression_to_schema(?MOD_FUN_ARGS('kz_api', 'validate', [_Prop, _Required, Values, Types]), Acc) ->
+    io:format("process validator for ~p~n", [Acc#acc.api_name]),
     validators_to_schema(ast_to_proplist(Values), ast_to_proplist(Types), Acc);
 expression_to_schema(_Expr, Acc) ->
     Acc.
@@ -138,13 +155,13 @@ kapi_schema(#acc{schemas=Schemas
                 ,kapi_name=KAPI
                 ,api_name=API
                 }) ->
-    maps:get(API, maps:get(KAPI, Schemas, #{}), kz_json:new()).
+    kz_json:get_json_value([KAPI, API], Schemas, kz_json:new()).
 
 set_kapi_schema(#acc{schemas=Schemas
                     ,kapi_name=KAPI
                     ,api_name=API
                     }=Acc, Schema) ->
-    Acc#acc{schemas=Schemas#{KAPI => #{API => Schema}}}.
+    Acc#acc{schemas=kz_json:set_value([KAPI, API], Schema, Schemas)}.
 
 add_field([_|_]=Fields, Schema) ->
     Path = lists:join(<<"properties">>, Fields),
