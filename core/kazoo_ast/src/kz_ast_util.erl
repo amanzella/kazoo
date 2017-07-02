@@ -56,7 +56,7 @@ add_module_ast_fold(?AST_RECORD(Name, Fields), _Module, #module_ast{records=Rs}=
 add_module_ast_fold(_Other, _Module, Acc) ->
     Acc.
 
--spec ast_to_list_of_binaries(ast()) -> ne_binaries().
+-spec ast_to_list_of_binaries(erl_parse:abstract_expr()) -> ne_binaries().
 ast_to_list_of_binaries(ASTList) ->
     ast_to_list_of_binaries(ASTList, []).
 
@@ -73,7 +73,7 @@ ast_to_list_of_binaries(?LIST(?LIST(_, _)=H, T), Binaries) ->
 ast_to_list_of_binaries(?LIST(H, T), Binaries) ->
     ast_to_list_of_binaries(T, [binary_match_to_binary(H) | Binaries]).
 
--spec binary_match_to_binary(ast()) -> binary().
+-spec binary_match_to_binary(erl_parse:abstract_expr()) -> binary().
 binary_match_to_binary(?ATOM(A)) -> kz_term:to_binary(A);
 binary_match_to_binary(?BINARY_STRING(V)) ->
     kz_term:to_binary(V);
