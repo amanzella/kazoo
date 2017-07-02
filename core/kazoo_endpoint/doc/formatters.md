@@ -29,13 +29,13 @@ In the above partial example, the resource has defined formatters for the `reque
 
 For outbound (to the carrier) formatters, you can see the fields available by looking at the [kapi_offnet_resource request schema](applications/crossbar/priv/couchdb/schemas/kapi.offnet_resource.req.json).
 
-Inbound (from the carrier) fields are found in the [kapi_route request schema](/applications/crossbar/priv/couchdb/schemas/kapi_route.req.json).
+Inbound (from the carrier) fields are found in the [kapi_route request schema](https://github.com/2600hz/kazoo/blob/master/applications/crossbar/priv/couchdb/schemas/kapi_route.req.json).
 
 #### Devices, users, accounts
 
 It can be desirable to control the format of fields going to registered devices. You can place the `formatters` object on a device, user, or account, to have it be used when processing calls to endpoints. The `formatter` object(s) will be merged before being applied to the endpoint.
 
-Inbound fields are found in the [kapi_route request schema](/applications/crossbar/priv/couchdb/schemas/kapi_route.req.json); outbound fields are typically found when [bridging via kapi_dialplan](applications/crossbar/priv/couchdb/schemas/kapi.dialplan.bridge.json).
+Inbound fields are found in the [kapi_route request schema](https://github.com/2600hz/kazoo/blob/master/applications/crossbar/priv/couchdb/schemas/kapi_route.req.json); outbound fields are typically found when [bridging via kapi_dialplan](applications/crossbar/priv/couchdb/schemas/kapi.dialplan.bridge.json).
 
 ## Formatter format
 
