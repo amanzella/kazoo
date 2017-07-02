@@ -30,12 +30,17 @@ update_schema(?JSON_WRAPPER(_)=GeneratedJObj) ->
 update_schema(_JObj, 'undefined') -> 'ok';
 update_schema(GeneratedJObj, ID) ->
     Path = kz_ast_util:schema_path(<<ID/binary, ".json">>),
+    ExistingJObj = existing_schema(Path),
     MergedJObj = kz_json:merge(fun kz_json:merge_left/2
-                              ,existing_schema(Path)
+                              ,ExistingJObj
                               ,GeneratedJObj
                               ),
     UpdatedSchema = kz_json:delete_key(<<"id">>, MergedJObj),
-    'ok' = file:write_file(Path, kz_json:encode(UpdatedSchema)).
+    case kz_json:are_identical(ExistingJObj, UpdatedSchema) of
+        'true' -> 'ok';
+        'false' ->
+            'ok' = file:write_file(Path, kz_json:encode(UpdatedSchema))
+    end.
 
 -spec existing_schema(file:filename_all()) -> kz_json:object().
 existing_schema(Name) ->
