@@ -1,1 +1,69 @@
-{"type":"object","required":["Call-Direction","Call-ID","Caller-ID-Name","Caller-ID-Number","From","Request","To"],"properties":{"Usage":{"type":"object"},"To":{},"From":{},"Event-Name":{"type":"string","enum":["authz_req"]},"Event-Category":{"type":"string","enum":["authz"]},"Custom-Channel-Vars":{"type":"object"},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"Account-ID":{}},"description":"AMQP API for authz.authz_req","_id":"kapi.authz.authz_req","Usage":{"type":"object"},"To":{},"Switch-Hostname":{},"Request":{},"Other-Leg-Call-ID":{},"From-Network-Port":{},"From-Network-Addr":{},"From":{},"Event-Name":{"type":"string","enum":["authz_req"]},"Event-Category":{"type":"string","enum":["authz"]},"Custom-Channel-Vars":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"Call-Direction":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Call-Direction": {},
+    "Call-ID": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Custom-Channel-Vars": {},
+    "Event-Category": {
+        "enum": [
+            "authz"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "authz_req"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "From-Network-Addr": {},
+    "From-Network-Port": {},
+    "Other-Leg-Call-ID": {},
+    "Request": {},
+    "Switch-Hostname": {},
+    "To": {},
+    "Usage": {
+        "type": "object"
+    },
+    "_id": "kapi.authz.authz_req",
+    "description": "AMQP API for authz.authz_req",
+    "properties": {
+        "Account-ID": {},
+        "Call-ID": {},
+        "Caller-ID-Name": {},
+        "Caller-ID-Number": {},
+        "Custom-Channel-Vars": {
+            "type": "object"
+        },
+        "Event-Category": {
+            "enum": [
+                "authz"
+            ],
+            "type": "string"
+        },
+        "Event-Name": {
+            "enum": [
+                "authz_req"
+            ],
+            "type": "string"
+        },
+        "From": {},
+        "To": {},
+        "Usage": {
+            "type": "object"
+        }
+    },
+    "required": [
+        "Call-Direction",
+        "Call-ID",
+        "Caller-ID-Name",
+        "Caller-ID-Number",
+        "From",
+        "Request",
+        "To"
+    ],
+    "type": "object"
+}

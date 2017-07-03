@@ -1,1 +1,48 @@
-{"type":"object","required":["Message-Left","Call-Bridged","Call-ID","Account-ID"],"properties":{},"description":"AMQP API for notifications.missed_call","_id":"kapi.notifications.missed_call","To-User":{},"To-Realm":{},"To":{},"Timestamp":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"Notify":{},"Message-Left":{},"HTML":{},"From-User":{},"From-Realm":{},"From":{},"Event-Name":{"type":"string","enum":["missed_call"]},"Event-Category":{"type":"string","enum":["notification"]},"Cc":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"Call-Bridged":{},"Bcc":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Call-Bridged": {},
+    "Call-ID": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Cc": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "missed_call"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "From-Realm": {},
+    "From-User": {},
+    "HTML": {},
+    "Message-Left": {},
+    "Notify": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "Timestamp": {},
+    "To": {},
+    "To-Realm": {},
+    "To-User": {},
+    "_id": "kapi.notifications.missed_call",
+    "description": "AMQP API for notifications.missed_call",
+    "properties": {},
+    "required": [
+        "Message-Left",
+        "Call-Bridged",
+        "Call-ID",
+        "Account-ID"
+    ],
+    "type": "object"
+}

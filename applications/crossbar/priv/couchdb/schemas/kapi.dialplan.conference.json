@@ -1,1 +1,60 @@
-{"type":"object","required":["Conference-ID","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.conference","_id":"kapi.dialplan.conference","Reinvite":{"type":"boolean"},"Profile":{},"Nospeak-Check":{},"Mute":{"type":"boolean"},"Moderator":{"type":"boolean"},"Member-Nospeak":{},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Deaf":{"type":"boolean"},"Conference-ID":{"type":"string"},"Call-ID":{"type":"string"},"Application-Name":{"type":"string","enum":["conference"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {
+        "type": "string"
+    },
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Deaf": {
+        "type": "boolean"
+    },
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Member-Nospeak": {},
+    "Moderator": {
+        "type": "boolean"
+    },
+    "Mute": {
+        "type": "boolean"
+    },
+    "Nospeak-Check": {},
+    "Profile": {},
+    "Reinvite": {
+        "type": "boolean"
+    },
+    "_id": "kapi.dialplan.conference",
+    "description": "AMQP API for dialplan.conference",
+    "properties": {},
+    "required": [
+        "Conference-ID",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

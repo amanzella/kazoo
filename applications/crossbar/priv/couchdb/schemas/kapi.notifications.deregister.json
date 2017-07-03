@@ -1,1 +1,56 @@
-{"type":"object","required":["Account-ID","Realm","Username"],"properties":{},"description":"AMQP API for notifications.deregister","_id":"kapi.notifications.deregister","Username":{},"User-Agent":{},"To-User":{},"To-Host":{},"To":{},"Text":{},"Suppress-Unregister-Notify":{},"Subject":{},"Status":{},"Reply-To":{},"Realm":{},"RPid":{},"Profile-Name":{},"Preview":{},"Presence-Hosts":{},"Network-Port":{},"Network-IP":{},"HTML":{},"From-User":{},"From-Host":{},"From":{},"FreeSWITCH-Hostname":{},"Expires":{},"Event-Timestamp":{},"Event-Name":{"type":"string","enum":["deregister"]},"Event-Category":{"type":"string","enum":["notification"]},"Contact":{},"Cc":{},"Call-ID":{},"Bcc":{},"Authorizing-ID":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Authorizing-ID": {},
+    "Bcc": {},
+    "Call-ID": {},
+    "Cc": {},
+    "Contact": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "deregister"
+        ],
+        "type": "string"
+    },
+    "Event-Timestamp": {},
+    "Expires": {},
+    "FreeSWITCH-Hostname": {},
+    "From": {},
+    "From-Host": {},
+    "From-User": {},
+    "HTML": {},
+    "Network-IP": {},
+    "Network-Port": {},
+    "Presence-Hosts": {},
+    "Preview": {},
+    "Profile-Name": {},
+    "RPid": {},
+    "Realm": {},
+    "Reply-To": {},
+    "Status": {},
+    "Subject": {},
+    "Suppress-Unregister-Notify": {},
+    "Text": {},
+    "To": {},
+    "To-Host": {},
+    "To-User": {},
+    "User-Agent": {},
+    "Username": {},
+    "_id": "kapi.notifications.deregister",
+    "description": "AMQP API for notifications.deregister",
+    "properties": {},
+    "required": [
+        "Account-ID",
+        "Realm",
+        "Username"
+    ],
+    "type": "object"
+}

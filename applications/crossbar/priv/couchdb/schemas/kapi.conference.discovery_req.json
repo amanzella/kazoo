@@ -1,1 +1,34 @@
-{"type":"object","required":["Call"],"properties":{},"description":"AMQP API for conference.discovery_req","_id":"kapi.conference.discovery_req","Play-Welcome-Media":{},"Play-Welcome":{"type":"boolean"},"Play-Exit-Tone":{},"Play-Entry-Tone":{},"Moderator":{"type":"boolean"},"Event-Name":{"type":"string","enum":["discovery_req"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{},"Conference-Doc":{},"Call":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call": {},
+    "Conference-Doc": {},
+    "Conference-ID": {},
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "discovery_req"
+        ],
+        "type": "string"
+    },
+    "Moderator": {
+        "type": "boolean"
+    },
+    "Play-Entry-Tone": {},
+    "Play-Exit-Tone": {},
+    "Play-Welcome": {
+        "type": "boolean"
+    },
+    "Play-Welcome-Media": {},
+    "_id": "kapi.conference.discovery_req",
+    "description": "AMQP API for conference.discovery_req",
+    "properties": {},
+    "required": [
+        "Call"
+    ],
+    "type": "object"
+}

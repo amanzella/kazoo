@@ -1,1 +1,38 @@
-{"type":"object","required":["Data","Hook"],"properties":{},"description":"AMQP API for notifications.webhook","_id":"kapi.notifications.webhook","To":{},"Timestamp":{},"Text":{},"Subject":{},"Reply-To":{},"Preview":{},"Hook":{},"HTML":{},"From":{},"Event-Name":{"type":"string","enum":["webhook"]},"Event-Category":{"type":"string","enum":["notification"]},"Data":{},"Cc":{},"Bcc":{},"Attachment-URL":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Cc": {},
+    "Data": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "webhook"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "HTML": {},
+    "Hook": {},
+    "Preview": {},
+    "Reply-To": {},
+    "Subject": {},
+    "Text": {},
+    "Timestamp": {},
+    "To": {},
+    "_id": "kapi.notifications.webhook",
+    "description": "AMQP API for notifications.webhook",
+    "properties": {},
+    "required": [
+        "Data",
+        "Hook"
+    ],
+    "type": "object"
+}

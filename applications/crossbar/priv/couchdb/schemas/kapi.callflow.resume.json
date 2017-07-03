@@ -1,1 +1,25 @@
-{"type":"object","required":["Flow","Call"],"properties":{},"description":"AMQP API for callflow.resume","_id":"kapi.callflow.resume","Flow":{},"Event-Name":{"type":"string","enum":["resume"]},"Event-Category":{"type":"string","enum":["callflow"]},"Call":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call": {},
+    "Event-Category": {
+        "enum": [
+            "callflow"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "resume"
+        ],
+        "type": "string"
+    },
+    "Flow": {},
+    "_id": "kapi.callflow.resume",
+    "description": "AMQP API for callflow.resume",
+    "properties": {},
+    "required": [
+        "Flow",
+        "Call"
+    ],
+    "type": "object"
+}

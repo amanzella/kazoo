@@ -1,1 +1,35 @@
-{"type":"object","required":["Expires"],"properties":{},"md5":{},"description":"AMQP API for nodes.advertise","_id":"kapi.nodes.advertise","Zone":{},"WhApps":{},"Version":{},"Used-Memory":{},"Registrations":{},"Processes":{},"Ports":{},"Node-Info":{},"Media-Servers":{},"Globals":{},"Expires":{},"Event-Name":{"type":"string","enum":["advertise"]},"Event-Category":{"type":"string","enum":["nodes"]},"Channels":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Channels": {},
+    "Event-Category": {
+        "enum": [
+            "nodes"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "advertise"
+        ],
+        "type": "string"
+    },
+    "Expires": {},
+    "Globals": {},
+    "Media-Servers": {},
+    "Node-Info": {},
+    "Ports": {},
+    "Processes": {},
+    "Registrations": {},
+    "Used-Memory": {},
+    "Version": {},
+    "WhApps": {},
+    "Zone": {},
+    "_id": "kapi.nodes.advertise",
+    "description": "AMQP API for nodes.advertise",
+    "md5": {},
+    "properties": {},
+    "required": [
+        "Expires"
+    ],
+    "type": "object"
+}

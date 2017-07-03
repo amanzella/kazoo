@@ -1,1 +1,32 @@
-{"type":"object","required":["Timestamp","Agent-ID","Account-ID"],"properties":{},"description":"AMQP API for acdc_stats.status_connecting","_id":"kapi.acdc_stats.status_connecting","Wait-Time":{},"Timestamp":{},"Pause-Time":{},"Event-Name":{"type":"string","enum":["connecting"]},"Event-Category":{"type":"string","enum":["acdc_status_stat"]},"Caller-ID-Number":{},"Caller-ID-Name":{},"Call-ID":{},"Agent-ID":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Agent-ID": {},
+    "Call-ID": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Event-Category": {
+        "enum": [
+            "acdc_status_stat"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "connecting"
+        ],
+        "type": "string"
+    },
+    "Pause-Time": {},
+    "Timestamp": {},
+    "Wait-Time": {},
+    "_id": "kapi.acdc_stats.status_connecting",
+    "description": "AMQP API for acdc_stats.status_connecting",
+    "properties": {},
+    "required": [
+        "Timestamp",
+        "Agent-ID",
+        "Account-ID"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,33 @@
-{"type":"object","required":["Voice-URI","Call"],"properties":{},"description":"AMQP API for pivot.req","_id":"kapi.pivot.req","Voice-URI":{},"Request-Format":{},"HTTP-Method":{},"Event-Name":{"type":"string","enum":["pivot_req"]},"Event-Category":{"type":"string","enum":["dialplan"]},"Debug":{"type":"boolean"},"Call":{"type":"object"},"CDR-URI":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "CDR-URI": {},
+    "Call": {
+        "type": "object"
+    },
+    "Debug": {
+        "type": "boolean"
+    },
+    "Event-Category": {
+        "enum": [
+            "dialplan"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "pivot_req"
+        ],
+        "type": "string"
+    },
+    "HTTP-Method": {},
+    "Request-Format": {},
+    "Voice-URI": {},
+    "_id": "kapi.pivot.req",
+    "description": "AMQP API for pivot.req",
+    "properties": {},
+    "required": [
+        "Voice-URI",
+        "Call"
+    ],
+    "type": "object"
+}

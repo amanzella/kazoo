@@ -1,1 +1,58 @@
-{"type":"object","required":["Media-Transfer-Destination","Media-Transfer-Method","Media-Name","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.store","_id":"kapi.dialplan.store","Suppress-Error-Report":{"type":"boolean"},"Media-Transfer-Method":{"type":"string","enum":["stream","put","post"]},"Media-Transfer-Destination":{},"Media-Name":{},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["store"]},"Additional-Headers":{"type":"array"},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Additional-Headers": {
+        "type": "array"
+    },
+    "Application-Name": {
+        "enum": [
+            "store"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Media-Name": {},
+    "Media-Transfer-Destination": {},
+    "Media-Transfer-Method": {
+        "enum": [
+            "stream",
+            "put",
+            "post"
+        ],
+        "type": "string"
+    },
+    "Suppress-Error-Report": {
+        "type": "boolean"
+    },
+    "_id": "kapi.dialplan.store",
+    "description": "AMQP API for dialplan.store",
+    "properties": {},
+    "required": [
+        "Media-Transfer-Destination",
+        "Media-Transfer-Method",
+        "Media-Name",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

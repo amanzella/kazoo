@@ -1,1 +1,33 @@
-{"type":"object","required":["Error-Code","Media-Name"],"properties":{},"description":"AMQP API for media.error","_id":"kapi.media.error","Media-Name":{},"Event-Name":{"type":"string","enum":["media_error"]},"Event-Category":{"type":"string","enum":["media"]},"Error-Msg":{},"Error-Code":{"type":"string","enum":["not_found","no_data","other"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Error-Code": {
+        "enum": [
+            "not_found",
+            "no_data",
+            "other"
+        ],
+        "type": "string"
+    },
+    "Error-Msg": {},
+    "Event-Category": {
+        "enum": [
+            "media"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "media_error"
+        ],
+        "type": "string"
+    },
+    "Media-Name": {},
+    "_id": "kapi.media.error",
+    "description": "AMQP API for media.error",
+    "properties": {},
+    "required": [
+        "Error-Code",
+        "Media-Name"
+    ],
+    "type": "object"
+}

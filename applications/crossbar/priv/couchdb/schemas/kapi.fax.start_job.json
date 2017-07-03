@@ -1,1 +1,27 @@
-{"type":"object","required":["To-Number","Account-ID","Job-ID"],"properties":{},"description":"AMQP API for fax.start_job","_id":"kapi.fax.start_job","To-Number":{},"Job-ID":{},"Event-Name":{"type":"string","enum":["job"]},"Event-Category":{"type":"string","enum":["start"]},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Event-Category": {
+        "enum": [
+            "start"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "job"
+        ],
+        "type": "string"
+    },
+    "Job-ID": {},
+    "To-Number": {},
+    "_id": "kapi.fax.start_job",
+    "description": "AMQP API for fax.start_job",
+    "properties": {},
+    "required": [
+        "To-Number",
+        "Account-ID",
+        "Job-ID"
+    ],
+    "type": "object"
+}

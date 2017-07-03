@@ -1,1 +1,26 @@
-{"type":"object","required":[],"properties":{},"description":"AMQP API for frontier.acls_resp","_id":"kapi.frontier.acls_resp","Realm":{"type":"object"},"Event-Name":{"type":"string","enum":["query_resp"]},"Event-Category":{"type":"string","enum":["acl"]},"Device":{"type":"object"},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Device": {
+        "type": "object"
+    },
+    "Event-Category": {
+        "enum": [
+            "acl"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "query_resp"
+        ],
+        "type": "string"
+    },
+    "Realm": {
+        "type": "object"
+    },
+    "_id": "kapi.frontier.acls_resp",
+    "description": "AMQP API for frontier.acls_resp",
+    "properties": {},
+    "required": [],
+    "type": "object"
+}

@@ -1,1 +1,26 @@
-{"type":"object","required":["Conference-ID"],"properties":{},"description":"AMQP API for conference.search_req","_id":"kapi.conference.search_req","Event-Name":{"type":"string","enum":["search_req"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{"type":"string"},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "search_req"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.conference.search_req",
+    "description": "AMQP API for conference.search_req",
+    "properties": {},
+    "required": [
+        "Conference-ID"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,112 @@
-{"type":"object","required":["Body","Application-Name","Endpoints","Call-ID"],"properties":{},"description":"AMQP API for sms.message","_id":"kapi.sms.message","To-User":{},"To-URI":{},"To-Realm":{},"Timeout":{},"Simplify-Loopback":{},"Secure-RTP":{},"SIP-Transport":{"type":"string","enum":["udp","tcp","tls"]},"SIP-Headers":{"type":"object"},"Route-Type":{"type":"string","enum":["on-net","off-net"]},"Route-ID":{},"Ringback":{},"Outbound-Caller-ID-Number":{},"Outbound-Caller-ID-Name":{},"Outbound-Callee-ID-Number":{},"Outbound-Callee-ID-Name":{},"Message-ID":{"type":"string"},"Media":{},"Loopback-Bowout":{},"Insert-At":{},"Ignore-Forward":{},"Ignore-Early-Media":{},"Ignore-Completed-Elsewhere":{},"Hold-Media":{},"From-User":{},"From-URI":{},"From-Realm":{},"Force-Fax":{},"Fail-On-Single-Reject":{},"Event-Name":{"type":"string","enum":["route"]},"Event-Category":{"type":"string","enum":["message"]},"Endpoints":{"type":"array"},"Enable-T38-Passthrough":{},"Enable-T38-Gateway":{},"Enable-T38-Fax-Request":{},"Enable-T38-Fax":{},"Dial-Endpoint-Method":{"type":"string","enum":["single","simultaneous"]},"Custom-SIP-Headers":{"type":"object"},"Custom-Channel-Vars":{"type":"object"},"Continue-On-Fail":{"type":"boolean"},"Confirm-Key":{},"Confirm-File":{},"Confirm-Cancel-Timeout":{},"Caller-ID-Number":{},"Caller-ID-Name":{},"Callee-ID-Number":{},"Callee-ID-Name":{},"Call-ID":{},"Body":{"type":"string"},"B-Leg-Events":{},"Application-Name":{"type":"string","enum":["send"]},"Application-Data":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Data": {},
+    "Application-Name": {
+        "enum": [
+            "send"
+        ],
+        "type": "string"
+    },
+    "B-Leg-Events": {},
+    "Body": {
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Callee-ID-Name": {},
+    "Callee-ID-Number": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Confirm-Cancel-Timeout": {},
+    "Confirm-File": {},
+    "Confirm-Key": {},
+    "Continue-On-Fail": {
+        "type": "boolean"
+    },
+    "Custom-Channel-Vars": {
+        "type": "object"
+    },
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Dial-Endpoint-Method": {
+        "enum": [
+            "single",
+            "simultaneous"
+        ],
+        "type": "string"
+    },
+    "Enable-T38-Fax": {},
+    "Enable-T38-Fax-Request": {},
+    "Enable-T38-Gateway": {},
+    "Enable-T38-Passthrough": {},
+    "Endpoints": {
+        "type": "array"
+    },
+    "Event-Category": {
+        "enum": [
+            "message"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "route"
+        ],
+        "type": "string"
+    },
+    "Fail-On-Single-Reject": {},
+    "Force-Fax": {},
+    "From-Realm": {},
+    "From-URI": {},
+    "From-User": {},
+    "Hold-Media": {},
+    "Ignore-Completed-Elsewhere": {},
+    "Ignore-Early-Media": {},
+    "Ignore-Forward": {},
+    "Insert-At": {},
+    "Loopback-Bowout": {},
+    "Media": {},
+    "Message-ID": {
+        "type": "string"
+    },
+    "Outbound-Callee-ID-Name": {},
+    "Outbound-Callee-ID-Number": {},
+    "Outbound-Caller-ID-Name": {},
+    "Outbound-Caller-ID-Number": {},
+    "Ringback": {},
+    "Route-ID": {},
+    "Route-Type": {
+        "enum": [
+            "on-net",
+            "off-net"
+        ],
+        "type": "string"
+    },
+    "SIP-Headers": {
+        "type": "object"
+    },
+    "SIP-Transport": {
+        "enum": [
+            "udp",
+            "tcp",
+            "tls"
+        ],
+        "type": "string"
+    },
+    "Secure-RTP": {},
+    "Simplify-Loopback": {},
+    "Timeout": {},
+    "To-Realm": {},
+    "To-URI": {},
+    "To-User": {},
+    "_id": "kapi.sms.message",
+    "description": "AMQP API for sms.message",
+    "properties": {},
+    "required": [
+        "Body",
+        "Application-Name",
+        "Endpoints",
+        "Call-ID"
+    ],
+    "type": "object"
+}

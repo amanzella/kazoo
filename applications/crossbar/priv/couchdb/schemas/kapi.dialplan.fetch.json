@@ -1,1 +1,42 @@
-{"type":"object","required":["Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.fetch","_id":"kapi.dialplan.fetch","Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"From-Other-Leg":{"type":"boolean"},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["fetch"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "fetch"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "From-Other-Leg": {
+        "type": "boolean"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.fetch",
+    "description": "AMQP API for dialplan.fetch",
+    "properties": {},
+    "required": [
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

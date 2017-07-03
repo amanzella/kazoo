@@ -1,1 +1,27 @@
-{"type":"object","required":["Stream-URL","Media-Name"],"properties":{"Stream-URL":{}},"description":"AMQP API for media.resp","_id":"kapi.media.resp","Stream-URL":{},"Media-Name":{},"Event-Name":{"type":"string","enum":["media_resp"]},"Event-Category":{"type":"string","enum":["media"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "media"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "media_resp"
+        ],
+        "type": "string"
+    },
+    "Media-Name": {},
+    "Stream-URL": {},
+    "_id": "kapi.media.resp",
+    "description": "AMQP API for media.resp",
+    "properties": {
+        "Stream-URL": {}
+    },
+    "required": [
+        "Stream-URL",
+        "Media-Name"
+    ],
+    "type": "object"
+}

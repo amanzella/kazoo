@@ -1,1 +1,35 @@
-{"type":"object","required":["Media-Name","Conference-ID","Application-Name"],"properties":{},"description":"AMQP API for conference.record","_id":"kapi.conference.record","Media-Name":{},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["conference"]},"Conference-ID":{"type":"string"},"Call-ID":{},"Application-Name":{"type":"string","enum":["record"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "record"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Conference-ID": {
+        "type": "string"
+    },
+    "Event-Category": {
+        "enum": [
+            "conference"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Media-Name": {},
+    "_id": "kapi.conference.record",
+    "description": "AMQP API for conference.record",
+    "properties": {},
+    "required": [
+        "Media-Name",
+        "Conference-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

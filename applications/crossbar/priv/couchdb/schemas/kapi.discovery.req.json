@@ -1,1 +1,35 @@
-{"type":"object","required":["Quantity","Offset","Prefix","Query-ID"],"properties":{},"description":"AMQP API for discovery.req","_id":"kapi.discovery.req","Query-ID":{"type":"string"},"Quantity":{"type":"integer"},"Prefix":{},"Offset":{"type":"integer"},"Event-Name":{"type":"string","enum":["request"]},"Event-Category":{"type":"string","enum":["discovery"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "discovery"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "request"
+        ],
+        "type": "string"
+    },
+    "Offset": {
+        "type": "integer"
+    },
+    "Prefix": {},
+    "Quantity": {
+        "type": "integer"
+    },
+    "Query-ID": {
+        "type": "string"
+    },
+    "_id": "kapi.discovery.req",
+    "description": "AMQP API for discovery.req",
+    "properties": {},
+    "required": [
+        "Quantity",
+        "Offset",
+        "Prefix",
+        "Query-ID"
+    ],
+    "type": "object"
+}

@@ -1,1 +1,24 @@
-{"type":"object","required":["Realm"],"properties":{},"description":"AMQP API for registration.flush","_id":"kapi.registration.flush","Username":{},"Realm":{},"Event-Name":{"type":"string","enum":["reg_flush"]},"Event-Category":{"type":"string","enum":["directory"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "directory"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "reg_flush"
+        ],
+        "type": "string"
+    },
+    "Realm": {},
+    "Username": {},
+    "_id": "kapi.registration.flush",
+    "description": "AMQP API for registration.flush",
+    "properties": {},
+    "required": [
+        "Realm"
+    ],
+    "type": "object"
+}

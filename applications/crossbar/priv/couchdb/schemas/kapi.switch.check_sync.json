@@ -1,1 +1,25 @@
-{"type":"object","required":["Realm","Username"],"properties":{},"description":"AMQP API for switch.check_sync","_id":"kapi.switch.check_sync","Username":{},"Realm":{},"Event-Name":{"type":"string","enum":["check_sync"]},"Event-Category":{"type":"string","enum":["switch_event"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "switch_event"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "check_sync"
+        ],
+        "type": "string"
+    },
+    "Realm": {},
+    "Username": {},
+    "_id": "kapi.switch.check_sync",
+    "description": "AMQP API for switch.check_sync",
+    "properties": {},
+    "required": [
+        "Realm",
+        "Username"
+    ],
+    "type": "object"
+}

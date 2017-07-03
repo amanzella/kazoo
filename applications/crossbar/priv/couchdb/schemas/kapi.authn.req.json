@@ -1,1 +1,54 @@
-{"type":"object","required":["Auth-Realm","Auth-User","From","To"],"properties":{},"description":"AMQP API for authn.req","_id":"kapi.authn.req","User-Agent":{},"To":{"type":"string"},"Switch-Hostname":{},"Orig-Port":{"type":"string"},"Orig-IP":{"type":"string"},"Method":{},"From":{"type":"string"},"Expires":{},"Event-Name":{"type":"string","enum":["authn_req"]},"Event-Category":{"type":"string","enum":["directory"]},"Custom-SIP-Headers":{"type":"object"},"Contact":{},"Call-ID":{},"Auth-User":{"type":"string"},"Auth-Response":{},"Auth-Realm":{"type":"string"},"Auth-Nonce":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Auth-Nonce": {},
+    "Auth-Realm": {
+        "type": "string"
+    },
+    "Auth-Response": {},
+    "Auth-User": {
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Contact": {},
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Event-Category": {
+        "enum": [
+            "directory"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "authn_req"
+        ],
+        "type": "string"
+    },
+    "Expires": {},
+    "From": {
+        "type": "string"
+    },
+    "Method": {},
+    "Orig-IP": {
+        "type": "string"
+    },
+    "Orig-Port": {
+        "type": "string"
+    },
+    "Switch-Hostname": {},
+    "To": {
+        "type": "string"
+    },
+    "User-Agent": {},
+    "_id": "kapi.authn.req",
+    "description": "AMQP API for authn.req",
+    "properties": {},
+    "required": [
+        "Auth-Realm",
+        "Auth-User",
+        "From",
+        "To"
+    ],
+    "type": "object"
+}

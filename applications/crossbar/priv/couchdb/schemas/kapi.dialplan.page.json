@@ -1,1 +1,55 @@
-{"type":"object","required":["Endpoints","Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.page","_id":"kapi.dialplan.page","Timeout":{},"Page-Options":{},"Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Endpoints":{"type":"array"},"Custom-SIP-Headers":{"type":"object"},"Custom-Channel-Vars":{"type":"object"},"Caller-ID-Number":{},"Caller-ID-Name":{},"Callee-ID-Number":{},"Callee-ID-Name":{},"Call-ID":{},"Application-Name":{"type":"string","enum":["page"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "page"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Callee-ID-Name": {},
+    "Callee-ID-Number": {},
+    "Caller-ID-Name": {},
+    "Caller-ID-Number": {},
+    "Custom-Channel-Vars": {
+        "type": "object"
+    },
+    "Custom-SIP-Headers": {
+        "type": "object"
+    },
+    "Endpoints": {
+        "type": "array"
+    },
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "Page-Options": {},
+    "Timeout": {},
+    "_id": "kapi.dialplan.page",
+    "description": "AMQP API for dialplan.page",
+    "properties": {},
+    "required": [
+        "Endpoints",
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

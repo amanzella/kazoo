@@ -1,1 +1,51 @@
-{"type":"object","required":["Success","Response","Timestamp","Amount","Account-ID"],"properties":{},"description":"AMQP API for notifications.transaction","_id":"kapi.notifications.transaction","To":{},"Timestamp":{},"Text":{},"Tax-Amount":{},"Success":{},"Subject":{},"Service-Plan":{},"Response":{},"Reply-To":{},"Purchase-Order":{},"Preview":{},"ID":{},"HTML":{},"From":{},"Event-Name":{"type":"string","enum":["transaction"]},"Event-Category":{"type":"string","enum":["notification"]},"Discounts":{},"Currency-Code":{},"Cc":{},"Card-Last-Four":{},"Billing-Address":{},"Bcc":{},"Attachment-URL":{},"Amount":{},"Add-Ons":{},"Account-ID":{},"Account-DB":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-DB": {},
+    "Account-ID": {},
+    "Add-Ons": {},
+    "Amount": {},
+    "Attachment-URL": {},
+    "Bcc": {},
+    "Billing-Address": {},
+    "Card-Last-Four": {},
+    "Cc": {},
+    "Currency-Code": {},
+    "Discounts": {},
+    "Event-Category": {
+        "enum": [
+            "notification"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "transaction"
+        ],
+        "type": "string"
+    },
+    "From": {},
+    "HTML": {},
+    "ID": {},
+    "Preview": {},
+    "Purchase-Order": {},
+    "Reply-To": {},
+    "Response": {},
+    "Service-Plan": {},
+    "Subject": {},
+    "Success": {},
+    "Tax-Amount": {},
+    "Text": {},
+    "Timestamp": {},
+    "To": {},
+    "_id": "kapi.notifications.transaction",
+    "description": "AMQP API for notifications.transaction",
+    "properties": {},
+    "required": [
+        "Success",
+        "Response",
+        "Timestamp",
+        "Amount",
+        "Account-ID"
+    ],
+    "type": "object"
+}

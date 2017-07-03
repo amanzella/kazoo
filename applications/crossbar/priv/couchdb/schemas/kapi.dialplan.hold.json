@@ -1,1 +1,40 @@
-{"type":"object","required":["Call-ID","Application-Name"],"properties":{},"description":"AMQP API for dialplan.hold","_id":"kapi.dialplan.hold","Insert-At":{"type":"string","enum":["head","tail","flush","now"]},"Hold-Media":{},"Event-Name":{"type":"string","enum":["command"]},"Event-Category":{"type":"string","enum":["call"]},"Call-ID":{},"Application-Name":{"type":"string","enum":["hold"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Application-Name": {
+        "enum": [
+            "hold"
+        ],
+        "type": "string"
+    },
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "command"
+        ],
+        "type": "string"
+    },
+    "Hold-Media": {},
+    "Insert-At": {
+        "enum": [
+            "head",
+            "tail",
+            "flush",
+            "now"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.dialplan.hold",
+    "description": "AMQP API for dialplan.hold",
+    "properties": {},
+    "required": [
+        "Call-ID",
+        "Application-Name"
+    ],
+    "type": "object"
+}

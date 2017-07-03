@@ -1,1 +1,42 @@
-{"type":"object","required":["Status","Agent-ID","Account-ID"],"properties":{},"description":"AMQP API for acdc_agent.sync_resp","_id":"kapi.acdc_agent.sync_resp","Time-Left":{},"Status":{"type":"string","enum":["init","sync","ready","waiting","ringing","answered","wrapup","paused"]},"Process-ID":{},"Event-Name":{"type":"string","enum":["sync_resp"]},"Event-Category":{"type":"string","enum":["agent"]},"Call-ID":{},"Agent-ID":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Agent-ID": {},
+    "Call-ID": {},
+    "Event-Category": {
+        "enum": [
+            "agent"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "sync_resp"
+        ],
+        "type": "string"
+    },
+    "Process-ID": {},
+    "Status": {
+        "enum": [
+            "init",
+            "sync",
+            "ready",
+            "waiting",
+            "ringing",
+            "answered",
+            "wrapup",
+            "paused"
+        ],
+        "type": "string"
+    },
+    "Time-Left": {},
+    "_id": "kapi.acdc_agent.sync_resp",
+    "description": "AMQP API for acdc_agent.sync_resp",
+    "properties": {},
+    "required": [
+        "Status",
+        "Agent-ID",
+        "Account-ID"
+    ],
+    "type": "object"
+}

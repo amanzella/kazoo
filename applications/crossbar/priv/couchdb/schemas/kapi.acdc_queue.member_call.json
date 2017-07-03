@@ -1,1 +1,45 @@
-{"type":"object","required":["Account-ID","Queue-ID","Call"],"properties":{"Queue-ID":{"type":"string"},"Member-Priority":{},"Event-Name":{"type":"string","enum":["call"]},"Event-Category":{"type":"string","enum":["member"]}},"description":"AMQP API for acdc_queue.member_call","_id":"kapi.acdc_queue.member_call","Queue-ID":{},"Member-Priority":{},"Event-Name":{"type":"string","enum":["call"]},"Event-Category":{"type":"string","enum":["member"]},"Call":{},"Account-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Account-ID": {},
+    "Call": {},
+    "Event-Category": {
+        "enum": [
+            "member"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "call"
+        ],
+        "type": "string"
+    },
+    "Member-Priority": {},
+    "Queue-ID": {},
+    "_id": "kapi.acdc_queue.member_call",
+    "description": "AMQP API for acdc_queue.member_call",
+    "properties": {
+        "Event-Category": {
+            "enum": [
+                "member"
+            ],
+            "type": "string"
+        },
+        "Event-Name": {
+            "enum": [
+                "call"
+            ],
+            "type": "string"
+        },
+        "Member-Priority": {},
+        "Queue-ID": {
+            "type": "string"
+        }
+    },
+    "required": [
+        "Account-ID",
+        "Queue-ID",
+        "Call"
+    ],
+    "type": "object"
+}

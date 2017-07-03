@@ -1,1 +1,20 @@
-{"type":"object","required":[],"properties":{},"description":"AMQP API for authn.error","_id":"kapi.authn.error","Event-Name":{"type":"string","enum":["authn_err"]},"Event-Category":{"type":"string","enum":["directory"]},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Event-Category": {
+        "enum": [
+            "directory"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "authn_err"
+        ],
+        "type": "string"
+    },
+    "_id": "kapi.authn.error",
+    "description": "AMQP API for authn.error",
+    "properties": {},
+    "required": [],
+    "type": "object"
+}

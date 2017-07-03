@@ -1,1 +1,26 @@
-{"type":"object","required":["Error-Message"],"properties":{},"description":"AMQP API for dialplan.error","_id":"kapi.dialplan.error","Request":{},"Event-Name":{"type":"string","enum":["dialplan"]},"Event-Category":{"type":"string","enum":["error"]},"Error-Message":{},"Custom-Channel-Vars":{},"Call-ID":{},"$schema":"http://json-schema.org/draft-04/schema#"}
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "Call-ID": {},
+    "Custom-Channel-Vars": {},
+    "Error-Message": {},
+    "Event-Category": {
+        "enum": [
+            "error"
+        ],
+        "type": "string"
+    },
+    "Event-Name": {
+        "enum": [
+            "dialplan"
+        ],
+        "type": "string"
+    },
+    "Request": {},
+    "_id": "kapi.dialplan.error",
+    "description": "AMQP API for dialplan.error",
+    "properties": {},
+    "required": [
+        "Error-Message"
+    ],
+    "type": "object"
+}
