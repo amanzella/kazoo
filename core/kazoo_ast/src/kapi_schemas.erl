@@ -170,9 +170,42 @@ set_kapi_schema(#acc{schemas=Schemas
 
 add_field([_|_]=Fields, Schema) ->
     Path = lists:join(<<"properties">>, Fields),
-    kz_json:insert_value(Path, kz_json:new(), Schema);
+
+    Guessed = guess_field_default(lists:last(Fields)),
+
+    Properties =  kz_json:get_json_value(Path, Schema, kz_json:new()),
+
+    kz_json:set_value(Path, kz_json:merge(Guessed, Properties), Schema);
 add_field(Field, Schema) ->
     add_field([Field], Schema).
+
+guess_field_default(<<"Call">>) ->
+    kz_json:from_list([{<<"type">>, <<"object">>}]);
+guess_field_default(<<"Notifications">>) ->
+    kz_json:from_list([{<<"type">>, <<"object">>}]);
+guess_field_default(<<"Reason">>) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
+guess_field_default(Field) ->
+    guess_field_default_rev(kz_json:normalize_key(kz_binary:reverse(Field))).
+
+guess_field_default_rev(<<"di_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
+guess_field_default_rev(<<"tuoemit_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}]);
+guess_field_default_rev(<<"emit_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}]);
+guess_field_default_rev(<<"lru_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
+guess_field_default_rev(<<"nosaer_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
+guess_field_default_rev(<<"yek_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]);
+guess_field_default_rev(<<"timil_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}]);
+guess_field_default_rev(<<"tfel_", _/binary>>) ->
+    kz_json:from_list([{<<"type">>, <<"integer">>}]);
+guess_field_default_rev(_Dleif) ->
+    kz_json:from_list([{<<"type">>, <<"string">>}]).
 
 validators_to_schema(Values, Types, Acc) ->
     Schema = lists:foldl(fun add_validator/2, kapi_schema(Acc), Values ++ Types),
