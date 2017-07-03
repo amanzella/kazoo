@@ -254,7 +254,7 @@ validator_properties({'function', 'store_media_content_v', 1}) ->
     kz_json:from_list([{<<"type">>, <<"string">>}]);
 validator_properties({'function', _F, _A}) ->
     io:format("  no properties for fun ~p/~p~n", [_F, _A]),
-    kz_json:new().
+    kz_json:from_list([{<<"type">>, <<"string">>}]).
 
 cost_parameters_schema() ->
     kz_json:from_list(
