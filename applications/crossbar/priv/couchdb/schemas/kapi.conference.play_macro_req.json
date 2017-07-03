@@ -1,17 +1,1 @@
-{
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "Application-Name": {},
-    "Conference-ID": {
-        "type": "string"
-    },
-    "Media-Macro": {},
-    "_id": "kapi.conference.play_macro_req",
-    "description": "AMQP API for conference.play_macro_req",
-    "properties": {},
-    "required": [
-        "Media-Macro",
-        "Conference-ID",
-        "Application-Name"
-    ],
-    "type": "object"
-}
+{"type":"object","required":["Media-Macro","Conference-ID","Application-Name"],"properties":{},"description":"AMQP API for conference.play_macro_req","_id":"kapi.conference.play_macro_req","Media-Macro":{},"Conference-ID":{"type":"string"},"Application-Name":{},"$schema":"http://json-schema.org/draft-04/schema#"}
